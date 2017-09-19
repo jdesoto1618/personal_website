@@ -18,11 +18,18 @@
           <h1><span class="highlight">Welcome</span> to Website Solutions!</h1>
         </div>
         <nav>
-          <ul>
-            <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
+          <!-- div to hold the men bars -->
+          <div class="menu-container" onclick="menuCollapse(this)">
+            <!-- set up the three menu bars -->
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+            <ul class="clearfix menu">
+              <li class="current"><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+            </ul>
+          </div> <!-- ends menu-container div -->
         </nav>
       </div>
     </header>
