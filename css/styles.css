@@ -88,7 +88,8 @@ header a:hover {
 /* showcase (main body content styling) */
 #body-content {
   min-height: 400px;
-  background: url('../img/bg4.jpg') no-repeat 0 -600px;
+  background: url('../img/bg4.jpg') no-repeat 0 -500px;
+  -webkit-filter:grayscale(100%); /* gray out picture to make text mroe visible */
   text-align: center;
   color: #fff;
 }
