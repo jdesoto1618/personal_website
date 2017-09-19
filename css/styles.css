@@ -1,3 +1,4 @@
+/* general body styling */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -23,7 +24,7 @@ ul {
 /* header */
 header {
   background-color: #35424a;
-  color: #e8491d;
+  color: #fff;
   padding-top: 15px;
   min-height: 70px;
   border-bottom: #e8491d 3px solid;
@@ -44,19 +45,29 @@ header li {
   padding: 0 20px 0 20px;
 }
 
+/* move branding to the left */
 header #branding {
   float: left;
 }
 
+/* set margin of welcome message h1 */
 header #branding h1 {
   margin: 0;
 }
+
+/* move menu to the right */
 header nav {
   float: right;
   margin-top: 10px;
 }
 
+/* current page color, welcome span color */
 header .highlight, header .current a{
   color: #e8491d;
   font-weight: bold;
+}
+
+/* link color on hover */
+header a:hover {
+  color: #ccc;
 }
