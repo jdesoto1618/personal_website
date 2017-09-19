@@ -15,6 +15,13 @@ body {
   overflow: hidden;
 }
 
+/* global dark background. put this class anywhere a dark background is needed. Also changes text color to white */
+.dark {
+  padding: 5px 20px 20px 20px;
+  background-color: #35424a;
+  color: #fff;
+}
+
 /* all ul's */
 ul {
   margin: 0;
@@ -150,6 +157,29 @@ header a:hover {
   width: 90px;
 }
 
+/* sidebar styling in about page */
+aside#sidebar { /* if attaching the id, place it as one word: aside#id */
+  float: right;
+  width: 30%;
+  margin-top: 10px;
+}
+
+/* text styling on about me section, about page */
+.page-title {
+  font-weight: bold;
+}
+
+/* text style on sidebar title, about page */
+.sidebar-title {
+  font-weight: bold;
+}
+
+/* main content styling in about page */
+article#main-col { /* same id attachment rule: article#id */
+  float: left;
+  width: 65%;
+}
+
 /* footer styling */
 footer {
   padding: 25px;
@@ -157,4 +187,9 @@ footer {
   color: #fff;
   background-color: #e8491d;
   text-align:center;
+}
+
+/* get rid of bottom margin on footer paragraph */
+footer p{
+  margin-bottom: 0px;
 }
