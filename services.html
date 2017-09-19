@@ -41,19 +41,47 @@
     <section id="main">
       <div class="container">
         <article id="main-col">
-          <h1 class="page-title">About Me</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,  nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h1 class="page-title">Services</h1>
+          <ul id="services">
+            <li>
+              <h3>Website Design</h3>
+              <p>Cost: $500 - $2,000 per project </p>
+            </li>
+            <li>
+              <h3>Website Development</h3>
+              <p>Cost: $2,500 - $4,000 per project </p>
+            </li>
+            <li>
+              <h3>Web Application</h3>
+              <p>Cost: $7,500 - 10,000 per project</p>
+            </li>
+          </ul>
         </article>
 
-        <!-- page sidebar -->
-        <aside id="sidebar">
-          <div class="dark">
-            <h3 class="sidebar-title">What We Do</h3>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-        </aside>
+        <!-- services page sidebar -->
+          <aside id="sidebar">
+            <div class="services-dark">
+              <h3 class="sidebar-quote-title">Get A Quote</h3>
+              <form class="quote" action="services.html" method="post">
+
+                <div class="sidebar-name-field">
+                  <input class="side-name" type="text" name="name" placeholder="Your name" required>
+                </div>
+
+                <div class="sidebar-email-field">
+                  <input class="side-email" type="email" name="email" placeholder="email@email.com" required>
+                </div>
+
+                <div class="sidebar-message">
+                  <textarea class="side-message" name="message" rows="4" cols="22" placeholder="Add your message here" required></textarea>
+                </div>
+
+                <div class="sidebar-quote-button">
+                  <button class="quote_button" type="submit" name="button">Get My Quote</button>
+                </div>
+              </form>
+            </div>
+          </aside>
       </div>
     </section>
 
