@@ -25,8 +25,8 @@ ul {
 header {
   background-color: #35424a;
   color: #fff;
-  padding-top: 15px;
-  min-height: 70px;
+  padding-top: 20px;
+  min-height: 85px;
   border-bottom: #e8491d 3px solid;
 }
 
@@ -70,4 +70,11 @@ header .highlight, header .current a{
 /* link color on hover */
 header a:hover {
   color: #ccc;
+}
+
+/* Showcase (main body content styling) */
+#body-content {
+  min-height: 400px;
+  background: url('../img/bg2.jpg') no-repeat 0 -200px;
+  text-align: center;
 }
