@@ -21,6 +21,11 @@ ul {
   padding: 0;
 }
 
+/* images section */
+#boxes {
+  margin-top: 20px;
+}
+
 /* header */
 header {
   background-color: #35424a;
@@ -108,7 +113,7 @@ header a:hover {
 /* newsletter subscribe form styling */
 #newsletter form {
   float: right;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 /* style email input box */
@@ -130,4 +135,17 @@ header a:hover {
   padding-right: 20;
   color: #fff;
   border-radius: 2px;
+}
+
+/* styling for the three boxes*/
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 33%; /* once these are floated left, reduce size of div so they all fit on the same line */
+  padding: 10px;
+}
+
+/* styling for the images in the boxes */
+#boxes .box img {
+  width: 90px;
 }
