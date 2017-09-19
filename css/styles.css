@@ -75,6 +75,20 @@ header a:hover {
 /* Showcase (main body content styling) */
 #body-content {
   min-height: 400px;
-  background: url('../img/bg2.jpg') no-repeat 0 -200px;
+  background: url('../img/bg4.jpg') no-repeat 0 -600px;
   text-align: center;
+  color: #fff;
+}
+
+/* Showcase h1 styling */
+#body-content h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+/* Showcase paragraph styling */
+#body-content p {
+  font-size: 20px;
 }
