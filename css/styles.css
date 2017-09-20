@@ -339,11 +339,6 @@ footer p {
       transition: 0.3s;
   }
 
-  /* style menu items to take up their own line on mobile */
-  /*ul.clearfix.menu {
-    width: 30%;
-  }*/
-
   /* change initial height of the menu until hamburger is clicked */
   .menu {
     height: 0;
