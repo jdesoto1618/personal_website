@@ -9,7 +9,7 @@
     <title>Websites by Joe DeSoto</title>
     <!-- Bootstrap CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header>
@@ -35,7 +35,39 @@
       </div>
     </header>
 
+    <!-- Add section above the project -->
+    <section id="newsletter">
+      <div class="container">
+        <h2>Image Slider. Move the mouse to change images!</h2>
+      </div>
+    </section>
 
+    <section id="wrapper" class="skewed">
+      <!-- Top layer and image -->
+      <div class="layer bottom">
+        <div class="content-wrap">
+          <div class="content-body">
+            <h1>Railroad</h1>
+            <p>While not as vital to passengers, rail transportation still moves millions of people per year and also transports significant amounts of cargo throughout the United States. </p>
+          </div> <!--ends content body-->
+          <img src="img/rr.jpg" alt="Rail Bridge">
+        </div> <!--ends content wrap-->
+      </div> <!--ends layer bottom-->
+
+      <!-- Bottom layer and image -->
+      <div class="layer top">
+        <div class="content-wrap">
+          <div class="content-body">
+            <h1>Coffee</h1>
+            <p>An integral part of American's lives, this drink took hold when need for an alternative beverage arose during the Boston Tea Party.</p>
+          </div> <!--ends content body-->
+          <img src="img/coffee.jpg" alt="Coffee Image">
+        </div> <!--ends content wrap-->
+      </div> <!--ends layer top-->
+
+      <!-- Skew line -->
+      <div class="handle"></div>
+    </section>
 
     <footer>
       <div class="container">
@@ -44,6 +76,7 @@
     </footer>
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="js/slider.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

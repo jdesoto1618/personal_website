@@ -56,13 +56,6 @@ body {
 **************************
 */
 
-/* all ul's */
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 /* images section */
 #boxes {
   margin-top: 20px;
@@ -77,6 +70,11 @@ header {
   border-bottom: #e8491d 3px solid;
 }
 
+/*
+**************************
+*     header styling     *
+**************************
+*/
 /* header links */
 header a {
   color: #fff;
@@ -89,6 +87,13 @@ header a {
 header li {
   float: left;
   padding: 0 10px 0 25px;
+}
+
+/* all ul's */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 /* move branding to the left */
@@ -118,6 +123,12 @@ header a:hover {
   color: #ccc;
 }
 
+/*
+**************************
+*   end header styling   *
+**************************
+*/
+
 /* main body content styling */
 #body-content {
   min-height: 400px;
@@ -140,6 +151,11 @@ header a:hover {
   font-size: 20px;
 }
 
+/*
+****************************
+*    newsletter styling    *
+****************************
+*/
 /* newsletter section styling */
 #newsletter {
   padding: 15px;
@@ -157,6 +173,12 @@ header a:hover {
   float: right;
   margin-top: 20px;
 }
+
+/*
+****************************
+*  end newsletter styling  *
+****************************
+*/
 
 /* style email input box */
 #newsletter input[type="email"] {
@@ -286,6 +308,8 @@ footer p {
   margin-bottom: 0px;
 }
 
+/* end footer styling */
+
 /*
 ******************************
 *       media queries        *
@@ -353,7 +377,6 @@ footer p {
 
   /* set the height when the menu is clicked */
   .open {
-    /*width: 100%;*/
     height: 90px;
   }
 

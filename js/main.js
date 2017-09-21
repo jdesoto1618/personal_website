@@ -4,7 +4,7 @@ $('.menu-container').on('click', function(){
   $('.menu').toggleClass('open');
 });
 
-// menu bars 
+// menu bars
 function menuCollapse(x) {
   x.classList.toggle('change');
 }
