@@ -227,7 +227,7 @@ footer p {
 }
 
 .skewed .handle {
-  top: 50%; /* starting position of image divider */
+  top: 50%; /* position of image divider */
   transform: rotate(30deg) translateY(-50%);
   height: 200%;
   transform-origin: top;
