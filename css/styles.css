@@ -1,4 +1,4 @@
-/* general body styling */
+/* body styling */
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
@@ -7,7 +7,12 @@ body {
   margin: 0;
   background-color: #f4f4f4;
 }
-/* global styling */
+
+/*
+******************************
+*       global styles        *
+******************************
+*/
 /* container divs */
 .container {
   width: 80%; /* responsive width */
@@ -24,7 +29,7 @@ body {
 
 /*
 ******************************
-  all menu bar divs and styles
+*    all menu bar styles     *
 ******************************
 */
 
@@ -46,9 +51,9 @@ body {
 }
 
 /*
-*********************************
-  end of menu bar divs and styles
-*********************************
+**************************
+* end of menu bar styles *
+**************************
 */
 
 /* all ul's */
@@ -113,7 +118,7 @@ header a:hover {
   color: #ccc;
 }
 
-/* showcase (main body content styling) */
+/* main body content styling */
 #body-content {
   min-height: 400px;
   background: url('../img/bg4.jpg') no-repeat 0 -500px;
@@ -122,7 +127,7 @@ header a:hover {
   color: #fff;
 }
 
-/* showcase h1 styling */
+/* main body h1 styling */
 #body-content h1 {
   margin-top: 100px;
   font-size: 55px;
@@ -231,7 +236,7 @@ ul#services li {
   background-color: #e6e6e6;
 }
 
-/* styling for the three boxes*/
+/* styling for the three boxes */
 #boxes .box {
   float: left;
   text-align: center;
@@ -280,10 +285,11 @@ footer {
 footer p {
   margin-bottom: 0px;
 }
+
 /*
-*************************
-      media queries
-*************************
+******************************
+*       media queries        *
+******************************
 */
 /* anything in this query will run only on screens of 768px or less */
 @media(max-width: 768px) {
