@@ -169,33 +169,26 @@ div.col-xs-6 {
   margin-bottom: 20px;
 }
 
-/* newsletter h2 styling */
+/* newsletter h2 color */
 #newsletter h2 {
-  float: left;
   color: #fff;
 }
 
-/* newsletter subscribe form styling */
+/* newsletter subscribe form margin */
 #newsletter form {
-  float: right;
   margin-top: 20px;
 }
 
-/* style newsletter on about page */
-
-/* style newsletter section on projects page */
-.newsletter-projects {
-  padding: 15px;
-  background-color: #35424a;
-  margin-bottom: 20px;
+/* style projects decription top margin. This page's description is different than the other pages  */
+.projects-description h2 {
+  margin-top: 10px;
 }
 
-/* style newsletter text in projects section */
-.newsletter-projects h2 {
-  color: #fff;
-  float: none;
-  text-align: center;
+/* add top border for index page newsletter section */
+.index-newsletter {
+  border-top: #e8491d 3px solid;
 }
+
 /*
 ****************************
 *  end newsletter styling  *
@@ -529,5 +522,15 @@ footer p {
   a.btn.btn-primary.btn-block {
       background-color: #4a4735;
       font-weight: bold;
+  }
+
+  /* set custom divider position for mobile so it lines up perfectly */
+  .handle {
+    left: 51%;
+  }
+
+  /* set the font size for image text on mobile */
+  .img-text {
+    font-size: 80%;
   }
 }
