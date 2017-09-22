@@ -278,8 +278,8 @@ footer p {
       transition: 0.3s;
   }
 
-  /* change initial height of the menu until hamburger is clicked */
-  .menu {
+  /* change initial height of the ul until hamburger is clicked */
+  .list-inline {
     height: 0;
     transition: height 0.6s;
   }
@@ -290,7 +290,7 @@ footer p {
   }
 
   /* change padding on mobile */
-  header li {
+  .list-inline>li {
     padding: 0 53px 0 1px;
     width: 100%;
   }
