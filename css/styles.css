@@ -166,9 +166,10 @@ div.col-xs-6 {
 #newsletter {
   padding: 15px;
   background-color: #35424a;
+  margin-bottom: 20px;
 }
 
-/* newsletter h1 styling */
+/* newsletter h2 styling */
 #newsletter h2 {
   float: left;
   color: #fff;
@@ -180,6 +181,21 @@ div.col-xs-6 {
   margin-top: 20px;
 }
 
+/* style newsletter on about page */
+
+/* style newsletter section on projects page */
+.newsletter-projects {
+  padding: 15px;
+  background-color: #35424a;
+  margin-bottom: 20px;
+}
+
+/* style newsletter text in projects section */
+.newsletter-projects h2 {
+  color: #fff;
+  float: none;
+  text-align: center;
+}
 /*
 ****************************
 *  end newsletter styling  *
@@ -313,8 +329,115 @@ footer {
 footer p {
   margin-bottom: 0px;
 }
-
 /* end footer styling */
+
+
+/*
+****************************
+*   image slider styling   *
+****************************
+*/
+
+#wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+  overflow: hidden;
+}
+
+.layer .content-wrap {
+  position: absolute;
+  width: 100vw;
+  min-height: 55vw;
+}
+
+.layer .content-body {
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform:translateY(-50%);
+  color: #fff;
+}
+
+.layer img {
+  position: absolute;
+  width: 35%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.layer h1 {
+  font-size: 2em;
+}
+
+.bottom {
+  background: #222;
+  z-index: 1;
+}
+
+.bottom .content-body {
+  right: 5%;
+}
+
+.bottom h1 {
+  color: #fdab00;
+}
+
+.top {
+  background-color: #eee;
+  color: #222;
+  z-index: 2;
+  width: 50vw;
+}
+
+.top .content-body {
+  left: 5%;
+  color: #222;
+}
+
+.handle {
+  position: absolute;
+  height: 100%;
+  display: block;
+  background-color: #fdab00;
+  width: 5px; /* set width of image divider */
+  top: 0;
+  left: 50.3%; /* starting position of divider before mouseover */
+  z-index: 3; /* place on top of all elements */
+}
+
+.skewed .handle {
+  top: 50%; /* position of image divider */
+  transform: rotate(30deg) translateY(-50%);
+  height: 200%;
+  transform-origin: top;
+}
+
+.skewed .top {
+  transform: skew(-30deg);
+  margin-left: -1000px;
+  width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap {
+  transform: skew(30deg);
+  margin-left: 1000px;
+}
+
+/*
+******************************
+*     end slider styling     *
+******************************
+*/
 
 /*
 ******************************
