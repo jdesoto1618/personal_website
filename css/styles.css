@@ -88,6 +88,11 @@ a.btn-primary.btn-block {
   border: none;
 }
 
+/* align page title with menu options */
+.col-xs-6.heading {
+  padding-top: 3px;
+}
+
 /* all ul's */
 ul {
   margin: 0;
