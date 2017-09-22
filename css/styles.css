@@ -207,13 +207,14 @@ div.col-xs-6 {
 /* subscribe button styling */
 .subscribe_button {
   height: 34px;
-  width: 100px;
+  width: 110px;
   background-color: #e8491d;
   border: none;
-  padding-left: 20;
-  padding-right: 20;
+  /*padding-left: 20;*/
+  /*padding-right: 20;*/
   color: #fff;
   border-radius: 2px;
+  margin-left: 5px;
 }
 
 /* quote button styling, services page */
