@@ -9,30 +9,34 @@
     <title>Websites by Joe DeSoto</title>
     <!-- Bootstrap CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
     <header>
       <div class="container">
-        <div id="branding">
-          <h1><span class="highlight">Current</span> Projects</h1>
-        </div>
-        <nav>
-          <!-- div to hold the menu bars -->
-          <div class="menu-container" onclick="menuCollapse(this)">
-            <!-- set up the three menu bars -->
-            <div class="b1"></div>
-            <div class="b2"></div>
-            <div class="b3"></div>
-          </div> <!-- ends menu-container div -->
-          <ul class="clearfix menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="current"><a href="projects.html">Projects</a></li>
-          </ul>
-        </nav>
-      </div>
+        <div id="branding" class="row">
+          <div class="col-xs-6">
+            <h1><span class="highlight">Current</span> Projects</h1>
+          </div>
+          <div class="col-xs-6">
+            <nav>
+              <!-- div to hold the menu bars -->
+              <div class="menu-container" onclick="menuCollapse(this)">
+                <!-- set up the three menu bars -->
+                <div class="b1"></div>
+                <div class="b2"></div>
+                <div class="b3"></div>
+              </div> <!-- ends menu-container div -->
+              <ul class="list-inline">
+                <li><a href="index.html" class="btn btn-primary btn-block">Home</a></li>
+                <li><a href="services.html" class="btn btn-primary btn-block">Services</a></li>
+                <li><a href="about.html" class="btn btn-primary btn-block">About</a></li>
+                <li><a href="projects.html" class="btn btn-primary btn-block"><span class="highlight">Projects</span></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div> <!-- closes row div -->
+      </div> <!-- closes container div -->
     </header>
 
     <!-- Add section above the project -->
