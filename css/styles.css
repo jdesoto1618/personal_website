@@ -144,7 +144,6 @@ div.col-xs-6 {
   min-height: 400px;
   background: url('../img/bg4.jpg') no-repeat 0 -500px;
   -webkit-filter:grayscale(100%); /* gray out picture to make text more visible */
-  text-align: center;
   color: #fff;
 }
 
@@ -444,6 +443,21 @@ footer p {
 *       media queries        *
 ******************************
 */
+
+/* media query to handle newsletter form issue starting at 969 px */
+@media(max-width: 969px) {
+  /* margin adjustments for email field at this screen size */
+  #newsletter form input[type="email"] {
+    margin-bottom: 5px;
+    margin-right: 2px;
+  }
+
+  /* adjust width to match email field width */
+  #newsletter button {
+    width: 251px;
+  }
+}
+
 /* anything in this query will run only on screens of 768px or less */
 @media(max-width: 768px) {
   header #branding,
@@ -469,17 +483,19 @@ footer p {
 
   #newsletter button {
     display: block;
-    width: 100%;
+    width: 200px;
   }
 
   #newsletter form input[type="email"] {
-    width: 97%;
+    display: block;
+    width: 200px;
+    margin-left: 4px;
     margin-bottom: 5px;
   }
 }
 
 /* mobile media query */
-@media only screen and (max-width: 480px) {
+@media(max-width: 480px) {
   /* set menu bar div styles */
   .menu-container {
     display: block;
@@ -539,5 +555,21 @@ footer p {
   /* set the font size for image text on mobile */
   .img-text {
     font-size: 80%;
+  }
+
+  /* reduce font size on mobile */
+  #body-content h1 {
+    font-size: 40px;
+  }
+
+  /* margin adjustments for email field on mobile */
+  #newsletter form input[type="email"] {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  /* adjust width to match email field on mobile */
+  #newsletter button {
+    display: inline;
   }
 }
