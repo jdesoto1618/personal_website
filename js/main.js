@@ -22,9 +22,8 @@ img.onclick = function(){
     captionText.innerHTML = this.alt; // image alt, defined in markup
 }
 
-// span element that closes the modal
+// span element that closes the modal. [0] accesses the markup because the variable span is an object
 var span = document.getElementsByClassName("close")[0];
-
 // when the user clicks on span (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
