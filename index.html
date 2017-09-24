@@ -78,20 +78,32 @@
         <div class="box">
           <div class="row">
             <div class="col-xs-4 text-center">
-              <a href="#"><img src="img/html5-img.jpg" alt="HTML 5"></a>
+              <img id="myImg" src="img/html5-img.jpg" alt="HTML 5">
               <h3>HTML 5</h3>
-            </div>
+              <!-- The Modal -->
+              <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content" id="img01">
+
+                <!-- Modal Caption (Image Text) -->
+                <div id="caption"></div>
+              </div> <!-- closes modal div -->
+            </div> <!-- closes col-xs-4 tect center div -->
 
             <div class="box">
               <div class="col-xs-4 text-center">
-                <a href="#"><img src="img/css3.jpg" alt="CSS 3"></a>
+                <img id="" src="img/css3.jpg" alt="CSS 3">
                 <h3>CSS 3 Designs</h3>
               </div>
             </div>
 
             <div class="box">
               <div class="col-xs-4 text-center">
-                <a href="#"><img src="img/tb.png" alt="Twitter Bootstrap"></a>
+                <img id="" src="img/tb.png" alt="Twitter Bootstrap">
                 <h3>Bootstrap 3 Styling</h3>
               </div>
             </div>
