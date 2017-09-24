@@ -279,14 +279,6 @@ ul#services li {
   background-color: #e6e6e6;
 }
 
-/* styling for the three boxes */
-#boxes .box {
-  float: left;
-  text-align: center;
-  width: 33%; /* once these are floated left, reduce size of div so they all fit on the same line */
-  padding: 10px;
-}
-
 /* styling for the images in the boxes */
 #boxes .box img {
   width: 90px;
@@ -454,7 +446,7 @@ footer p {
 
   /* adjust width to match email field width */
   #newsletter button {
-    width: 251px;
+    width: 250px;
   }
 }
 
@@ -536,7 +528,7 @@ footer p {
     height: 160px;
   }
 
-  /* change padding on mobile */
+  /* change header li padding on mobile */
   header li {
     padding: 0 53px 0 1px;
   }
@@ -547,17 +539,17 @@ footer p {
       font-weight: bold;
   }
 
-  /* set custom divider position for mobile so it lines up perfectly */
+  /* on projects page, set custom image divider position for mobile so it lines up perfectly */
   .handle {
     left: 51%;
   }
 
-  /* set the font size for image text on mobile */
+  /* on projects page, set the font size for image text on mobile */
   .img-text {
     font-size: 80%;
   }
 
-  /* reduce font size on mobile */
+  /* reduce font size on mobile for all pages */
   #body-content h1 {
     font-size: 40px;
   }
@@ -565,7 +557,7 @@ footer p {
   /* margin adjustments for email field on mobile */
   #newsletter form input[type="email"] {
     display: inline;
-    margin-right: 5px;
+    margin-right: 6px;
   }
 
   /* adjust width to match email field on mobile */
