@@ -316,9 +316,17 @@ footer {
   text-align:center;
 }
 
-/* get rid of bottom margin on footer paragraph */
-footer p {
-  margin-bottom: 0px;
+/* footer text margin adjustment */
+.footer_link {
+  margin-left: 50px;
+}
+
+/* adjust image image size in footer */
+.footer_img {
+  width: 100px;
+  height: 28.21px;
+  padding: 0px;
+  margin: 0px;
 }
 /* end footer styling */
 
