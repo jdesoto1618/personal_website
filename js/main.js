@@ -8,13 +8,12 @@ $(document).ready(function () {
   });
 
   if ($('body').hasClass('index')) {
-    // // Get the modal
+    // Get the modal
     var modal = document.getElementById('myModal');
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     // multiple images now have the class of myImg. want to capture all images with this class to set up modals
     var img = document.getElementsByClassName('myImg');
-    console.log(img);
     // this is where the image will be placed into. as is, this is an empty image with no source until jquery puts the clicked image in it
     var modalImg = document.getElementById("img01");
     // empty div, until jquery places the text in it
@@ -25,18 +24,17 @@ $(document).ready(function () {
         captionText.innerHTML = this.alt; // use the actual image alt as its modal caption, defined in markup
     }
 
-    // // multi-image modal
+    // multi-image modal
     // $('#myModal').on('show.bs.modal', function (e) {
     //   var image = $(e.relatedTarget).attr('src');
     //   $(".modal-content").attr("src", image);
-    //   console.log(image);
     // });
-    // use alt in markup as image caption
-    var captionText = document.getElementById("caption");
-    $( ".col-xs-4.text-center" ).on( "click", function() {
-      console.log('caption');
-      captionText.innerHTML = $(this).find(".itemdesc").text();
-    });
+    // // use alt in markup as image caption
+    // var captionText = document.getElementById("caption");
+    // $( ".col-xs-4.text-center" ).on( "click", function() {
+    //   console.log('caption');
+    //   captionText.innerHTML = $(this).find(".itemdesc").text();
+    // });
 
     // span element that closes the modal. [0] accesses the markup because the variable span is an object
     var span = document.getElementsByClassName("close")[0];
