@@ -133,11 +133,11 @@ div.col-xs-6 {
   padding: 0;
 }
 
-/* set colors for projects button states */
-.open>.dropdown-toggle.btn-primary:hover,
+/* set colors for projects button states. commented this out until the dropdown menu is fixed, or functionality is moved to a different page */
+/*.open>.dropdown-toggle.btn-primary:hover,
 .open>.dropdown-toggle.btn-primary:focus {
   background: #286090;
-}
+}*/
 
 /*
 **************************
