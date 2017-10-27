@@ -8,40 +8,14 @@ $(document).ready(function () {
   });
 
   if ($('body').hasClass('index')) {
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the image and insert it inside the modal - use its "alt" text as a caption
-    // multiple images now have the class of myImg. want to capture all images with this class to set up modals
-    var img = document.getElementsByClassName('myImg');
-    // this is where the image will be placed into. as is, this is an empty image with no source until jquery puts the clicked image in it
-    var modalImg = document.getElementById("img01");
-    // empty div, until jquery places the text in it
-    var captionText = document.getElementById("caption");
-    img.onclick = function(){
-        modal.style.display = "block";
-        modalImg.src = this.src; // use the actual image source as the modal image source, defined in markup
-        captionText.innerHTML = this.alt; // use the actual image alt as its modal caption, defined in markup
-    }
-
     // multi-image modal
-    // $('#myModal').on('show.bs.modal', function (e) {
-    //   var image = $(e.relatedTarget).attr('src');
-    //   $(".modal-content").attr("src", image);
-    // });
-    // // use alt in markup as image caption
-    // var captionText = document.getElementById("caption");
-    // $( ".col-xs-4.text-center" ).on( "click", function() {
-    //   console.log('caption');
-    //   captionText.innerHTML = $(this).find(".itemdesc").text();
-    // });
+    $(document).ready(function () {
+      $('#myModal').on('show.bs.modal', function (e) {
+        var image = $(e.relatedTarget).attr('src');
+        $('.showimage').attr('src', image);
+      });
+    });
 
-    // span element that closes the modal. [0] accesses the markup because the variable span is an object
-    var span = document.getElementsByClassName("close")[0];
-    // when the user clicks on span (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
   } else if ($('body').hasClass('projects')) {
     // image slider code
     let wrapper = document.getElementById('wrapper');

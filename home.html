@@ -77,42 +77,36 @@
     <!-- TODO: Make each h3 in this section a link to the original image that pops up in a modal -->
     <section id="boxes">
       <div class="container">
-        <div class="box">
-          <div class="row">
-            <div class="col-xs-4 text-center">
-              <img class="myImg" src="img/html5-img.jpg" alt="HTML 5">
-              <h3 class="itemdesc">HTML 5</h3>
-              <!-- The Modal -->
-              <div id="myModal" class="modal">
+        <div class="row">
+          <div class="col-xs-4 text-center">
+            <img class="myImg" id="1" data-toggle="modal" data-target="#myModal" src="img/html5-img.jpg" alt="HTML 5">
+            <h3 class="itemdesc">HTML 5</h3>
+          </div> <!-- closes col-xs-4 text center div -->
 
-                <!-- The Close Button -->
-                <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+          <div class="col-xs-4 text-center">
+            <img class="myImg" id="2" data-toggle="modal" data-target="#myModal" src="img/css3.jpg" alt="CSS 3">
+            <h3 class="itemdesc">CSS 3 Designs</h3>
+          </div> <!-- closes col-xs-4 text center div -->
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content" id="img01" src="">
-
-                <!-- Modal Caption (Image Text) -->
-                <div id="caption"></div>
-              </div> <!-- closes modal div -->
-            </div> <!-- closes col-xs-4 tect center div -->
-
-            <div class="box">
-              <div class="col-xs-4 text-center">
-                <img id="" class="myImg" src="img/css3.jpg" alt="CSS 3">
-                <h3 class="itemdesc">CSS 3 Designs</h3>
-              </div>
-            </div>
-
-            <div class="box">
-              <div class="col-xs-4 text-center">
-                <img id="" class="myImg" src="img/tb.png" alt="Twitter Bootstrap">
-                <h3 class="itemdesc">Bootstrap 3 Styling</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+          <div class="col-xs-4 text-center">
+            <img class="myImg" id="3" data-toggle="modal" data-target="#myModal" src="img/tb.png" alt="Twitter Bootstrap">
+            <h3 class="itemdesc">Bootstrap 3</h3>
+          </div> <!-- closes col-xs-4 text center div -->
+        </div> <!-- closes row div -->
+      </div> <!-- closes container div -->
     </section>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- <div class="modal-content"> -->
+          <div class="modal-body">
+            <img class="showimage img-responsive" src="" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-block close_button" data-dismiss="modal">Close</button>
+          </div>
+        <!-- </div> --> <!-- closes modal-content div -->
+      </div> <!-- closes modal-dialog div -->
+    </div> <!-- closes modal div -->
 
     <footer>
       <div class="container">
@@ -132,3 +126,16 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
+
+
+<!-- single image modal code, w3schools -->
+<!-- The Modal -->
+<!-- <div id="myModal" class="modal"> -->
+  <!-- The Close Button -->
+  <!-- <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span> -->
+  <!-- Modal Content (The Image) -->
+  <!-- <img class="modal-content" id="img01" src=""> -->
+  <!-- Modal Caption (Image Text) -->
+  <!-- <div id="caption"></div> -->
+<!-- </div>--> <!-- closes modal div -->
