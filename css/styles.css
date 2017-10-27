@@ -133,6 +133,12 @@ div.col-xs-6 {
   padding: 0;
 }
 
+/* set colors for projects button states */
+.open>.dropdown-toggle.btn-primary:hover,
+.open>.dropdown-toggle.btn-primary:focus {
+  background: #286090;
+}
+
 /*
 **************************
 *   end header styling   *
