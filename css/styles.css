@@ -501,7 +501,7 @@ footer {
 }
 
 /* mobile media query */
-@media(max-width: 480px) {
+@media only screen and (max-width: 480px) {
   /* set menu bar div styles */
   .menu-container {
     display: block;
@@ -579,10 +579,29 @@ footer {
     display: inline;
   }
 
-  /* move modal close button on mobile */
-  span.close {
-      position: absolute;
-      right: 32%;
+  /* set styles for close button on modal */
+  .close_button {
+    width: 40%;
+    /* display: block is handled through bootstrap class assigned to the element: btn-block */
+    margin: auto;
+  }
+
+  img.myImg {
+    width: 100%;
+  }
+
+  .itemdesc {
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+
+  button.close_button {
+    width: 67%;
+  }
+
+  img.footer_img {
+    margin-top: 15px;
+    margin-right: 10vw;
   }
 }
 
