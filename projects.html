@@ -7,7 +7,7 @@
     <meta name="keywords" content="web, web development, website, websites, web design, html, css, js, webpage, developer">
     <meta name="author" content="Joe DeSoto">
     <!-- webpage tab text -->
-    <title>Websites by Joe DeSoto</title>
+    <title>Projects</title>
     <!-- Bootstrap CDN -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- css file link -->
@@ -47,44 +47,74 @@
       </div> <!-- closes container div -->
     </header>
 
-    <!-- Add section above the project. Use projects-description class to help with styling, as this section on this page is different than the other pages -->
-    <section id="newsletter" class="projects-description">
+    <section id="newsletter">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 text-center">
-            <h2>Image Slider. Move the mouse to change images!</h2>
+          <div class="col-xs-6 text-center">
+            <h2>Subscribe to the Newsletter!</h2>
+          </div>
+          <div class="col-xs-6 text-center">
+            <form action="home.html" method="post">
+              <input type="email" placeholder="email@email.com" required>
+              <button type="submit" class="subscribe_button" name="button">Subscribe</button>
+              <br><br>
+            </form>
           </div>
         </div>
       </div>
-    </section>
+    </section> <!-- ends newsletter section -->
 
-    <section id="wrapper" class="skewed">
-      <!-- Top layer and image -->
-      <div class="layer bottom">
-        <div class="content-wrap">
-          <div class="content-body">
-            <h1>Railroad</h1>
-            <p class="img-text">While not as vital to passengers, rail transportation still moves millions of people per year and also transports significant amounts of cargo throughout the United States. </p>
-          </div> <!--ends content body-->
-          <img src="img/rr.jpg" alt="Rail Bridge">
-        </div> <!--ends content wrap-->
-      </div> <!--ends layer bottom-->
+    <section id="main">
+      <div class="container">
+        <article id="main-col">
+          <section id="newsletter" class="projects-description">
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 text-center">
+                  <h2>Move the mouse to switch images and text</h2>
+                </div>
+              </div>
+            </div>
+          </section> <!-- ends projects-description section -->
 
-      <!-- Bottom layer and image -->
-      <div class="layer top">
-        <div class="content-wrap">
-          <div class="content-body">
-            <h1>Coffee</h1>
-            <p class="img-text">An integral part of American's lives, this drink took hold when need for an alternative beverage arose during the Boston Tea Party.</p>
-          </div> <!--ends content body-->
-          <img src="img/coffee.jpg" alt="Coffee Image">
-        </div> <!--ends content wrap-->
-      </div> <!--ends layer top-->
+          <section id="wrapper" class="skewed">
+            <!-- Top layer and image -->
+            <div class="layer bottom">
+              <div class="content-wrap">
+                <div class="railroad-body">
+                  <h1>Railroad</h1>
+                  <p class="img-text">While not as vital to passengers, rail transportation still moves millions of people per year and also transports significant amounts of cargo throughout the United States. </p>
+                </div> <!--ends content body-->
+                <img src="img/rr.jpg" alt="Rail Bridge">
+              </div> <!--ends content wrap-->
+            </div> <!--ends layer bottom-->
 
-      <!-- Skew line -->
-      <div class="handle"></div>
-    </section>
+            <!-- Bottom layer and image -->
+            <div class="layer top">
+              <div class="content-wrap">
+                <div class="coffee-body">
+                  <h1>Coffee</h1>
+                  <p class="img-text">An integral part of American's lives, this drink took hold when need for an alternative beverage arose during the Boston Tea Party.</p>
+                </div> <!--ends content body-->
+                <img src="img/coffee.jpg" alt="Coffee Image">
+              </div> <!--ends content wrap-->
+            </div> <!--ends layer top-->
+            <!-- skew line that divides the images -->
+            <div class="handle"></div>
+          </section> <!-- ends wrapper section -->
+        </article>
 
+        <!-- image slider section sidebar -->
+        <aside id="sidebar">
+          <div class="dark">
+            <h3 class="sidebar-title">Image Slider Description</h3>
+            <p>The image "slider" is written in vanilla JavaScript and CSS. It works by separating the two images and their corresponding description text into different layers, one on top and one on bottom. When the mouse is moving over an image, it is slowly concealing one layer over another, and back again when the mouse is moved in the opposite direction.</p>
+          </div>
+        </aside>
+      </div>
+    </section> <!-- ends main section -->
+
+    <hr class="project_separation">
     <footer>
       <div class="container">
         <div class="row">

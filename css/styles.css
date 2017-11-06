@@ -25,6 +25,16 @@ body {
   padding: 5px 20px 20px 20px;
   background-color: #35424a;
   color: #fff;
+  height: 65.5vh;
+}
+
+/* set styles for hr's */
+.project_separation {
+  border: 2px solid #e8491d;
+  position: absolute;
+  width: 81.7%;
+  top: 108.25%;
+  left: 11.1%;
 }
 
 /*
@@ -176,7 +186,7 @@ div.col-xs-6 {
 #newsletter {
   padding: 15px;
   background-color: #35424a;
-  margin-bottom: 20px;
+  margin-bottom: 2.983vh;
 }
 
 /* newsletter h2 color */
@@ -187,6 +197,12 @@ div.col-xs-6 {
 /* newsletter subscribe form margin */
 #newsletter form {
   margin-top: 20px;
+}
+
+/* set styles for projects-description div */
+.projects-description {
+  position: absolute;
+  width: 82%;
 }
 
 /* style projects decription top margin. This page's description is different than the other pages  */
@@ -292,9 +308,11 @@ ul#services li {
 
 /* sidebar styling in about page */
 aside#sidebar { /* if attaching the id, place it as one word: aside#id */
-  float: right;
+  position: absolute;
   width: 30%;
-  margin-top: 10px;
+  left: 62.3vw;
+  top: 46%;
+  text-align: center;
 }
 
 /* text styling on about me section, about page */
@@ -315,6 +333,9 @@ article#main-col { /* same id attachment rule: article#id */
 
 /* footer styling */
 footer {
+  position: absolute;
+  width: 100%;
+  top: 111.5%;
   padding: 25px;
   margin-top: 20px;
   color: #fff;
@@ -336,18 +357,16 @@ footer {
 }
 /* end footer styling */
 
-
-/*
-****************************
+/*****************************
 *   image slider styling   *
-****************************
-*/
+*****************************/
 
 #wrapper {
-  position: relative;
-  width: 100%;
-  min-height: 55vw;
+  position: absolute;
+  width: 51.94%;
+  min-height: 30.5vw;
   overflow: hidden;
+  top: 46%;
 }
 
 .layer {
@@ -360,23 +379,42 @@ footer {
 .layer .content-wrap {
   position: absolute;
   width: 100vw;
-  min-height: 55vw;
+  min-height: 8vw;
 }
 
-.layer .content-body {
-  width: 25%;
+/* set text position for coffe h1 */
+/*.layer .content-body {
+  width: 10%;
   position: absolute;
-  top: 50%;
+  top: 70%;
   text-align: center;
-  transform:translateY(-50%);
+  color: #fff;
+}*/
+
+/* set styles for coffee h1 */
+div.coffee-body {
+  width: 10%;
+  position: absolute;
+  top: 70%;
+  left: 3%;
+  text-align: center;
+}
+
+/* set styles for railroad h1 */
+div.railroad-body {
+  width: 10%;
+  top: 60%;
+  left: 37%;
+  position: absolute;
   color: #fff;
 }
 
+/* set image size for each picture on image slider */
 .layer img {
   position: absolute;
-  width: 35%;
-  top: 45%;
-  left: 50%;
+  width: 18%;
+  top: 180%;
+  left: 25%;
   transform: translate(-50%, -50%);
 }
 
@@ -416,21 +454,21 @@ footer {
   background-color: #fdab00;
   width: 5px; /* set width of image divider */
   top: 0;
-  left: 50.3%; /* starting position of divider before mouseover */
+  left: 49%; /* starting position of divider before mouseover */
   z-index: 3; /* place on top of all elements */
 }
 
 .skewed .handle {
-  top: 50%; /* position of image divider */
+  top: 11%; /* position of image divider */
   transform: rotate(30deg) translateY(-50%);
-  height: 200%;
+  height: 206%;
   transform-origin: top;
 }
 
 .skewed .top {
   transform: skew(-30deg);
-  margin-left: -1000px;
-  width: calc(50vw + 1000px);
+  margin-left: -1188px;
+  width: calc(25vw + 1000px);
 }
 
 .skewed .top .content-wrap {
@@ -561,6 +599,7 @@ footer {
   /* on projects page, set the font size for image text on mobile */
   .img-text {
     font-size: 80%;
+    margin: 0;
   }
 
   /* reduce font size on mobile for all pages */
