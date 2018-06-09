@@ -1,6 +1,22 @@
+/************************************************************
+**********              global styles              **********
+*************************************************************/
+
+/* set the box sizing for the entire document to border-box */
+html, body {
+  box-sizing: border-box;
+}
+
+/* this allows individual modifications to be made to the border box property. modifications made to an element are then inherited */
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* body styling */
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
   line-height: 1.5;
   padding: 0;
@@ -8,16 +24,11 @@ body {
   background-color: #f4f4f4;
 }
 
-/*
-******************************
-*       global styles        *
-******************************
-*/
 /* container divs */
 .container {
-  width: 80%; /* responsive width */
-  margin: auto; /* use margin auto for percentage width */
-  overflow: hidden;
+  width: 90%; /* set width of this container */
+  margin: auto; /* use margin auto for percentage width. this centers the elements */
+  overflow: hidden; /* hide the hanburger menu items */
 }
 
 /* global dark background. put this class anywhere a dark background is needed. Also changes text color to white */
@@ -37,11 +48,14 @@ body {
   left: 11.1%;
 }
 
-/*
-******************************
-*    all menu bar styles     *
-******************************
-*/
+/* images section */
+#boxes {
+  margin-top: 20px;
+}
+
+/************************************************************
+**********             menu bars                   **********
+*************************************************************/
 
 /* Rotate top bar */
 .change .b1 {
@@ -60,23 +74,9 @@ body {
     transform: rotate(45deg) translate(-7px, -8px) ;
 }
 
-/*
-**************************
-* end of menu bar styles *
-**************************
-*/
-
-/* images section */
-#boxes {
-  margin-top: 20px;
-}
-
-
-/*
-**************************
-*     header styling     *
-**************************
-*/
+/************************************************************
+**********             header styling              **********
+*************************************************************/
 
 /* header */
 header {
@@ -103,9 +103,9 @@ a.btn-primary.btn-block {
   padding-top: 3px;
 }
 
-/* all ul's */
+/* style ul's */
 ul {
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -149,11 +149,6 @@ div.col-xs-6 {
   background: #286090;
 }*/
 
-/*
-**************************
-*   end header styling   *
-**************************
-*/
 
 /* main body content styling */
 #body-content {
@@ -176,58 +171,52 @@ div.col-xs-6 {
   font-size: 20px;
 }
 
-/*
-****************************
-*    newsletter styling    *
-****************************
-*/
+/************************************************************
+**********         newsletter styling              **********
+*************************************************************/
 
 /* newsletter section styling */
 #newsletter {
   padding: 15px;
   background-color: #35424a;
-  margin-bottom: 2.983vh;
+  border-bottom: #e8491d 3px solid;
 }
 
 /* newsletter h2 color */
 #newsletter h2 {
   color: #fff;
+  margin-top: 10px;
 }
 
 /* newsletter subscribe form margin */
 #newsletter form {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-/* set styles for projects-description div */
-.projects-description {
+/* set styles for projects_description div */
+.projects_description {
   position: absolute;
   width: 82%;
 }
 
 /* style projects decription top margin. This page's description is different than the other pages  */
-.projects-description h2 {
+.projects_description h2 {
   margin-top: 10px;
 }
 
 /* add top border for index page newsletter section */
 .index-newsletter {
   border-top: #e8491d 3px solid;
+  border-bottom: #e8491d 3px solid;
 }
-
-/*
-****************************
-*  end newsletter styling  *
-****************************
-*/
 
 /* style email input box */
 #newsletter input[type="email"] {
-  padding: 15px;
-  height: 25px;
+  padding: 16px 15px 16px 2px; /* put placeholder in correct position due to padding */
+  height: 33px;
   width: 250px;
   border-radius: 2px;
-  padding-left: 2px; /*  set this to put placeholder in correct position due to padding */
+  border: none;
 }
 
 /* subscribe button styling */
@@ -238,7 +227,7 @@ div.col-xs-6 {
   border: none;
   color: #fff;
   border-radius: 2px;
-  margin-left: 5px;
+  font-weight: bold;
 }
 
 /* quote button styling, services page */
@@ -308,15 +297,20 @@ ul#services li {
 
 /* sidebar styling in about page */
 aside#sidebar { /* if attaching the id, place it as one word: aside#id */
-  position: absolute;
   width: 30%;
-  left: 62.3vw;
-  top: 46%;
+  float: right;
   text-align: center;
+  /* margin-top: 10px; */
 }
 
 /* text styling on about me section, about page */
 .page-title {
+  font-weight: bold;
+}
+
+/* style the contact us h1. this helps put the section and article at the same height on the page */
+.contact_us {
+  margin-left: 70%;
   font-weight: bold;
 }
 
@@ -333,19 +327,13 @@ article#main-col { /* same id attachment rule: article#id */
 
 /* footer styling */
 footer {
-  position: absolute;
   width: 100%;
   top: 111.5%;
-  padding: 25px;
+  padding: 15px 10px 10px 10px;
   margin-top: 20px;
   color: #fff;
   background-color: #e8491d;
   text-align:center;
-}
-
-/* footer text margin adjustment */
-.footer_link {
-  margin-left: 50px;
 }
 
 /* adjust image image size in footer */
@@ -357,16 +345,16 @@ footer {
 }
 /* end footer styling */
 
-/*****************************
-*   image slider styling   *
-*****************************/
+/************************************************************
+**********              image slider               **********
+*************************************************************/
 
 #wrapper {
   position: absolute;
   width: 51.94%;
   min-height: 30.5vw;
   overflow: hidden;
-  top: 46%;
+  margin-top: 10px;
 }
 
 .layer {
@@ -381,15 +369,6 @@ footer {
   width: 100vw;
   min-height: 8vw;
 }
-
-/* set text position for coffe h1 */
-/*.layer .content-body {
-  width: 10%;
-  position: absolute;
-  top: 70%;
-  text-align: center;
-  color: #fff;
-}*/
 
 /* set styles for coffee h1 */
 div.coffee-body {
@@ -418,6 +397,7 @@ div.railroad-body {
   transform: translate(-50%, -50%);
 }
 
+/* set font size for coffee/railroads project h1 */
 .layer h1 {
   font-size: 2em;
 }
@@ -476,33 +456,24 @@ div.railroad-body {
   margin-left: 1000px;
 }
 
-/*
-******************************
-*     end slider styling     *
-******************************
-*/
-
-/*
-******************************
-*       media queries        *
-******************************
-*/
+/************************************************************
+**********             media queries               **********
+*************************************************************/
 
 /* media query to handle newsletter form issue starting at 969 px */
 @media(max-width: 969px) {
   /* margin adjustments for email field at this screen size */
   #newsletter form input[type="email"] {
     margin-bottom: 5px;
-    margin-right: 2px;
   }
 
   /* adjust width to match email field width */
   #newsletter button {
-    width: 250px;
+    width: 251px;
   }
-}
+} /* ends 969px media query */
 
-/* anything in this query will run only on screens of 768px or less */
+/* run on screens up to 768px */
 @media(max-width: 768px) {
   header #branding,
   header nav,
@@ -510,11 +481,79 @@ div.railroad-body {
   #newsletter h1,
   #newsletter form,
   #boxes .box,
-  article#main-col,
-  aside#sidebar {
+  article#main-col {
     float: none;
     text-align: center;
+  }
+
+  /* set width of sidebar to take up entire section on smaller screens */
+  aside#sidebar {
     width: 100%;
+    /* custom top margin for smaller screens to separate a project from its description */
+    margin-top: 0;
+  }
+
+  /*  set width for services on smaller screens */
+  article#main-col {
+    width: 100%;
+  }
+
+  /* set custom width for smaller screens */
+  #wrapper {
+    width: 83.5%;
+  }
+
+  /* change the height property of this div so the box is the correct height */
+  .dark {
+    height: auto;
+    font-size: 13px;
+  }
+
+  /* custom width for railroad-body div on smaller screens. this is to encapsulate its text */
+  div.railroad-body {
+    width: 30%;
+    left: 50%;
+    /* used this to "reset" the top position */
+    top: auto;
+  }
+
+  /* custom width for coffee-body div on smaller screens. this is to encapsulate its text */
+  div.coffee-body {
+    width: 23%;
+    top: auto;
+  }
+
+  p.img-text {
+    font-size: 10px;
+  }
+
+  .contact_us {
+    margin-left: 0; /* remove previously set left margin */
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* set bottom div width on smaller screens */
+  .bottom {
+    background: #222;
+    z-index: 1;
+    width: 100%;
+  }
+
+  /* set size of h1 in railroad/coffee project */
+  .layer h1 {
+    font-size: 1.25em;
+  }
+
+  /* adjust starting position of yellow handle on smaller screens */
+  .handle {
+    left: 53%;
+  }
+
+  .skewed .top {
+    transform: skew(-30deg);
+    margin-left: -1065px;
+    width: calc(44vw + 1000px); /* set initial width of the top layer */
   }
 
   header {
@@ -533,13 +572,32 @@ div.railroad-body {
   #newsletter form input[type="email"] {
     display: block;
     width: 200px;
-    margin-left: 4px;
+    /* margin-left: 4px; */
     margin-bottom: 5px;
   }
-}
 
-/* mobile media query */
+  /* set image size for each picture on image slider */
+  .layer img {
+    position: absolute;
+    width: 15%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+} /* ends 768px media query */
+
+/* run on screens up to 480px */
 @media only screen and (max-width: 480px) {
+  /* set font size of page title for mobile */
+  .page_title {
+    font-size: 30px;
+  }
+
+  /* set styles for h2 title on mobile */
+  .newsletter_title {
+    font-size: 26px;
+    margin-top: 0;
+  }
+
   /* set menu bar div styles */
   .menu-container {
     display: block;
@@ -551,17 +609,16 @@ div.railroad-body {
 
   /* set up menu bar styles */
   .b1, .b2, .b3 {
-      width: 30px;
-      height: 3px;
-      background-color: #fff;
-      margin: 6px 0;
-      transition: 0.3s;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.3s;
   }
 
   /* move menu bars to the left on mobile */
   div.col-xs-6 {
     width: 100%; /* set buttons to take up their own row */
-    margin-left: 15px; /* center header content on mobile */
   }
 
   /* change initial height of the ul until hamburger is clicked */
@@ -573,22 +630,23 @@ div.railroad-body {
   /* space between buttons in header on mobile */
   .list-inline>li {
     margin-bottom: 5px;
+    width: 100%;
   }
 
   /* set the height when the menu is clicked */
   .open {
-    height: 160px;
+    height: 152px;
   }
 
   /* change header li padding on mobile */
   header li {
-    padding: 0 53px 0 1px;
+    /* padding: 0 53px 0 1px; */
   }
 
   /*  change color for buttons on mobile */
   a.btn.btn-primary.btn-block {
-      background-color: #4a4735;
-      font-weight: bold;
+    background-color: #4a4735;
+    font-weight: bold;
   }
 
   /* on projects page, set custom image divider position for mobile so it lines up perfectly */
@@ -607,21 +665,27 @@ div.railroad-body {
     font-size: 40px;
   }
 
-  /* margin adjustments for email field on mobile */
+  /* center newsletter input and submit button fields */
+  #newsletter form input[type="email"],
+  #newsletter button {
+    margin: 2% auto;
+  }
+
+  /* set width for email field on mobile */
   #newsletter form input[type="email"] {
-    display: inline;
-    margin-right: 6px;
+    width: 75%;
+    padding: 0 5px;
   }
 
   /* adjust width to match email field on mobile */
   #newsletter button {
-    display: inline;
+    width: 75%;
+    padding: 0;
   }
 
   /* set styles for close button on modal */
   .close_button {
     width: 40%;
-    /* display: block is handled through bootstrap class assigned to the element: btn-block */
     margin: auto;
   }
 
@@ -640,23 +704,15 @@ div.railroad-body {
 
   img.footer_img {
     margin-top: 15px;
-    margin-right: 10vw;
   }
-}
+} /* ends 480px media query
 
-/*
-******************************
-*     end media queries      *
-******************************
-*/
 
-/*
-******************************
-*       modal styling        *
-******************************
-*/
+/************************************************************
+**********              modal styling              **********
+*************************************************************/
 
-/* Style the Image Used to Trigger the Modal */
+/* style the image used to trigger the modal */
 .myImg {
     cursor: pointer;
     transition: 0.3s;
@@ -681,7 +737,6 @@ div.railroad-body {
 .showimage {
   display: block;
   margin: auto;
-  /* give same border radius as hover state */
   border-radius: 5px;
 }
 
@@ -693,7 +748,6 @@ div.railroad-body {
 /* set styles for close button on modal */
 .close_button {
   width: 40%;
-  /* display: block is handled through bootstrap class assigned to the element: btn-block */
   margin: auto;
 }
 
@@ -714,9 +768,3 @@ div.railroad-body {
   from {transform:scale(0)}
   to {transform:scale(1)}
 }
-
-/*
-******************************
-*     end modal styling      *
-******************************
-*/
