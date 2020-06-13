@@ -1,34 +1,21 @@
-/************************************************************
-**********              global styles              **********
-*************************************************************/
-
-/* set the box sizing for the entire document to border-box */
 html, body {
   box-sizing: border-box;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
 }
 
-/* this allows individual modifications to be made to the border box property. modifications made to an element are then inherited */
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* body styling */
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  padding: 0;
-  margin: 0;
-  background-color: #f4f4f4;
-}
-
-/* container divs */
 .container {
-  width: 90%; /* set width of this container */
-  margin: auto; /* use margin auto for percentage width. this centers the elements */
-  overflow: hidden; /* hide the hanburger menu items */
+  padding: 0 3rem;
+  overflow: hidden;
 }
 
 /* global dark background. put this class anywhere a dark background is needed. Also changes text color to white */
@@ -116,9 +103,10 @@ ul {
   padding-left: 0;
 }
 
-/* set margin of welcome message h1 */
-header #branding h1 {
+.page_title {
   margin: 0;
+  font-size: 2.5rem;
+  line-height: 1.25;
 }
 
 /* move menu to the right */
@@ -587,10 +575,6 @@ div.railroad-body {
 
 /* run on screens up to 480px */
 @media only screen and (max-width: 480px) {
-  /* set font size of page title for mobile */
-  .page_title {
-    font-size: 30px;
-  }
 
   /* set styles for h2 title on mobile */
   .newsletter_title {
