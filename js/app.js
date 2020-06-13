@@ -41,4 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
       // end image slider code
     }); //end wrapper function
   } // end else if
-}); // end document.ready
+
+  fetch('../views/footer.html')
+  .then(response => {
+    return response.text()
+  })
+  .then(data => {
+    document.querySelector("footer").innerHTML = data;
+  });
+});
