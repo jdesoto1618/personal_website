@@ -1,16 +1,34 @@
 document.addEventListener('DOMContentLoaded', function() {
   function getContainers() {
-    let menuContainer = document.querySelector('.menu-container');
-    let navList = document.querySelector('.list-inline');
-    return [menuContainer, navList];
+    const menuContainer = document.querySelector('.menu-container');
+    const navList = document.querySelector('.nav-list');
+    const imgContainer = document.querySelectorAll('.img-container');
+    const modalContainer = document.querySelector('.modal-content');
+    return [menuContainer, navList, imgContainer, modalContainer];
   }
 
   let menuContainer = getContainers()[0];
   let navList = getContainers()[1];
+  let imgContainer = getContainers()[2];
+  let modalContainer = getContainers()[3];
 
   menuContainer.addEventListener('click', function(){
-    menuContainer.classList.toggle('change');
+    menuContainer.classList.toggle('update-menu-bars');
     navList.classList.toggle('open');
+  });
+
+  let yearText = document.querySelector('.current-year');
+  yearText.innerHTML = new Date().getFullYear();
+
+  let inputUnderline = document.querySelector('.input-underline');
+  let emailInput = document.querySelector('.email-input');
+
+  emailInput.addEventListener('focusin', function(){
+    inputUnderline.classList.add('hide-input-underline');
+  });
+
+  emailInput.addEventListener('focusout', function(){
+    inputUnderline.classList.remove('hide-input-underline');
   });
 
   if ($('body').hasClass('index')) {

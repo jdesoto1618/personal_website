@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Professional Web Designs and Development">
     <meta name="keywords" content="web, web development, website, websites, web design, html, css, js, webpage, developer">
     <meta name="author" content="Joe DeSoto">
@@ -20,31 +20,33 @@
     <meta name="theme-color" content="#ffffff">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
+
   <body class="index">
 
     <header>
       <div class="container">
+
+        <div class="heading text-center">
+          <h1 class="page_title"><span class="highlight">Welcome</span> to Website Solutions!</h1>
+        </div>
+
         <div id="branding" class="row">
-          <div class="col-xs-6 heading">
-            <h1 class="page_title"><span class="highlight">Welcome</span> to Website Solutions!</h1>
-          </div>
-          <div class="col-xs-6">
+
+          <div class="col-xs-12 navbar-container">
             <nav>
               <div class="menu-container">
-                <div class="b1"></div>
-                <div class="b2"></div>
-                <div class="b3"></div>
+                <span class="menu-bar"></span>
               </div>
 
-              <ul class="list-inline">
+              <ul class='nav-list'>
                 <li><a href="home.html" class="btn btn-primary btn-block"><span class="highlight">Home</span></a></li>
                 <li><a href="services.html" class="btn btn-primary btn-block">Services</a></li>
                 <li><a href="about.html" class="btn btn-primary btn-block">About</a></li>
                 <li><a href="projects.html" class="btn btn-primary btn-block">Projects</a></li>
               </ul>
-
             </nav>
           </div>
+
         </div>
       </div>
     </header>
@@ -53,76 +55,69 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12 text-center">
-            <h1>Affordable, Professional Web Design and Development</h1>
-            <p>Website Solutions offers web development to anyone needing a website. Get a clean, modern website to make your product stand out.</p>
+            <h1 class="body-title">Affordable, Professional Web Development</h1>
+            <p class="body-copy">Website Solutions offers web development to anyone needing a website. Get a clean, modern website to make your product stand out.</p>
           </div>
         </div>
       </div>
     </section>
 
     <section id="newsletter" class="index-newsletter">
-      <div class="container">
         <div class="row">
-          <div class="col-xs-6 text-center">
+          <div class="small-12 medium-6 text-center">
             <h2 class="newsletter_title">Subscribe to the Newsletter!</h2>
           </div>
-          <div class="col-xs-6 text-center">
+          <div class="small-12 medium-6 text-center">
             <form action="home.html" method="post">
-              <input type="email" placeholder="email@email.com" required>
+              <input type="email" placeholder="email@email.com" class="email-input" required><span class="input-underline show-for-large"></span>
               <button type="submit" class="subscribe_button" name="button">Subscribe</button>
             </form>
+          </div>
+        </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="row images-row">
+          <div class="text-center img-container">
+            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/html5-img.jpg" alt="HTML 5">
+            <h5 class="itemdesc">HTML 5</h5>
+          </div>
+
+          <div class="text-center img-container">
+            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/css3.jpg" alt="CSS 3">
+            <h5 class="itemdesc">CSS 3</h5>
+          </div>
+
+          <div class="text-center img-container">
+            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/tb.png" alt="Twitter Bootstrap">
+            <h5 class="itemdesc">Bootstrap 3</h5>
+          </div>
+
+          <div class="text-center img-container">
+            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/rails-5.jpg" alt="Rails 5">
+            <h5 class="itemdesc">Rails 5</h5>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="boxes">
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-3 text-center">
-            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/html5-img.jpg" alt="HTML 5">
-            <h3 class="itemdesc">HTML 5</h3>
-          </div> <!-- closes col-xs- text center div -->
-
-          <div class="col-xs-3 text-center">
-            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/css3.jpg" alt="CSS 3">
-            <h3 class="itemdesc">CSS 3</h3>
-          </div> <!-- closes col-xs- text center div -->
-
-          <div class="col-xs-3 text-center">
-            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/tb.png" alt="Twitter Bootstrap">
-            <h3 class="itemdesc">Bootstrap 3</h3>
-          </div> <!-- closes col-xs- text center div -->
-
-          <div class="col-xs-3 text-center">
-            <img class="myImg" data-toggle="modal" data-target="#myModal" src="../img/rails-5.jpg" alt="Rails 5">
-            <h3 class="itemdesc">Rails 5</h3>
-          </div> <!-- closes col-xs- text center div -->
-        </div> <!-- closes row div -->
-      </div> <!-- closes container div -->
-    </section>
-
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" class="modal" role="dialog">
       <div class="modal-dialog">
-        <div class="modal-body">
-          <img class="showimage img-responsive" src="" />
+        <div class="modal-body modal-content">
+          <img class="showimage img-responsive" src="">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary btn-block close_button" data-dismiss="modal">Close</button>
+        <div class="modal-footer text-center">
+          <button type="button" class="btn close_button" data-dismiss="modal">Close</button>
         </div>
       </div> <!-- closes modal-dialog div -->
     </div> <!-- closes modal div -->
 
-    <footer>
+    <footer class="text-center">
       <div class="container">
         <div class="row">
-          <div class="col-xs-8">
-            Web Design and Development, Joe DeSoto. Copyright &copy; 2017
-          </div>
-          <div class="col-xs-4">
-            <a class = "footer_link" href="https://www.f6s.com/joedesoto?follow=1" target="_blank" title="Follow Joe DeSoto on F6S">
-              <img class="footer_img" src="https://www.f6s.com/images/f6s-follow-white.png" alt="Follow Joe DeSoto on F6S" />
-            </a>
+          <div class="col-xs-12">
+            Web development projects made by Joe DeSoto,  <span class="current-year"></span>.
           </div>
         </div>
       </div>
