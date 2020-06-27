@@ -38,7 +38,7 @@ h5 {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--c-white);
 }
 
@@ -395,9 +395,8 @@ header a:hover {
   font-size: 1.5rem;
 }
 
-/* text style on sidebar title, about page */
-.sidebar-title {
-  font-weight: bold;
+.about #main-col p:last-child {
+  margin-bottom: 3rem;
 }
 
 footer {
@@ -611,6 +610,10 @@ div.railroad-body {
   header #branding,
   #newsletter h1 {
     float: none;
+  }
+
+  p {
+    font-size: 1.6rem;
   }
 
   .medium-6 {
