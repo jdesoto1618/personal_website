@@ -271,6 +271,11 @@ header nav {
   margin: 0;
   font-size: 2.25rem;
   line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.about-title {
+  margin: 2rem 0;
 }
 
 /* current page color, welcome span color */
