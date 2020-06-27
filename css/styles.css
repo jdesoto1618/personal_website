@@ -46,25 +46,14 @@ a, button {
   letter-spacing: 0.5px;
 }
 
-li {
-  list-style-type: none;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.small-12 {
-  width: 100%;
-  padding: 0;
-}
-
-.show-for-large {
-  display: none;
-}
-
 .btn,
 button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 30rem;
+  height: 3.3rem;
+  padding: 0;
   border-radius: 0.4rem;
   border: 0.1rem solid transparent;
   outline: none;
@@ -85,12 +74,54 @@ button:focus {
   outline: none;
 }
 
+li {
+  list-style-type: none;
+}
+
+input, textarea {
+  width: 30rem;
+  height: 3.3rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+  padding: 0 1rem;
+  margin: 0 auto 1rem auto;
+  font-size: 1.1rem;
+  transition: border 0.3s linear;
+  color: var(--c-black);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  padding: 0.75rem 1rem;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.small-12 {
+  width: 100%;
+  padding: 0;
+}
+
+.show-for-large {
+  display: none;
+}
+
 .container {
   padding: 0 3rem;
   overflow: hidden;
 }
 
-/* global dark background. put this class anywhere a dark background is needed. Also changes text color to white */
+.dark-blue {
+  background-color: var(--theme-dark-blue);
+}
+
 .dark {
   padding: 5px 20px 20px 20px;
   background-color: var(--theme-dark-blue);
@@ -120,8 +151,8 @@ button:focus {
   width: 100%;
 }
 
-/* header links */
 .nav-list a {
+  display: block;
   color: #fff;
   text-decoration: none;
   font-size: 1.4rem;
@@ -130,6 +161,7 @@ button:focus {
   transition: all 0.3s linear;
   max-width: 47rem;
   margin: 0 auto;
+  padding: 0.5rem 0;
 }
 .nav-list a:active,
 .nav-list a:focus,
@@ -306,125 +338,62 @@ header a:hover {
   margin-bottom: 2rem;
 }
 
-.email-input {
-  height: 3.3rem;
-  width: 75%;
-  border-radius: 0.4rem;
-  border: 0.2rem solid transparent;
-  padding: 0 1rem;
-  margin: 0 auto 1rem auto;
-  font-size: 1.1rem;
-  transition: border 0.3s linear;
-}
-
-.email-input:focus {
-  outline: none;
-}
-
 .subscribe_button {
-  height: 3.3rem;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  width: 75%;
-  padding: 0;
   margin-bottom: 1.5rem;
-  font-size: 1.4rem;
 }
 
-/* quote button styling, services page */
+.quote div {
+  padding-bottom: 0.5rem;
+}
+
+.quote div:last-child {
+  padding-bottom: 0;
+}
+
 .quote_button {
-  height: 34px;
-  width: 89%;
-  background-color: var(--theme-orange);
-  border: none;
-  color: #fff;
-  border-radius: 2px;
-  margin-left: 3px;
-}
-
-/* set color for form input fields */
-.quote {
-  color: black;
-}
-
-/* sidebar quote button div styling, services page */
-.sidebar-quote-button {
-  text-align: center;
-}
-
-/* text style on sidebar title, services page */
-.sidebar-quote-title {
-  font-weight: bold;
-  text-align: center;
-}
-
-/* sidebar message div styling */
-.sidebar-message {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* style input field divs on services page */
-.sidebar-name-field, .sidebar-email-field, .sidebar-message, .quote_button {
-  text-align: center;
-  padding: 5px;
+  display: inline-block;
+  max-width: 80%;
 }
 
 /* input fields styling on services page */
 .side-name, .side-email, .side-message {
   width: 92%;
-  margin-left: 3px;
 }
 
-/* sidebar styling in services page */
-.services-dark {
-  padding: 5px 20px 35px 20px;
-  background-color: var(--theme-dark-blue);
-  color: #fff;
+.contact-form-container {
+  padding: 1.5rem 0 2.5rem 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-/* styling the list of services, on services page */
-ul#services li {
-  padding: 20px;
-  border: #ccc solid 1px;
-  margin-bottom: 5px;
+#main-col .page-title {
+  margin-bottom: 2rem;
+}
+
+#services {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#services li {
+  padding: 2rem;
+  margin-bottom: 0.5rem;
   background-color: #e6e6e6;
 }
 
-/* styling for the images on the index page */
-#boxes .box img {
-  width: 90px;
+#services h3 {
+  margin: 1rem 0;
 }
 
-/* sidebar styling in about page */
-aside#sidebar { /* if attaching the id, place it as one word: aside#id */
-  width: 30%;
-  float: right;
-  text-align: center;
-  /* margin-top: 10px; */
-}
-
-/* text styling on about me section, about page */
-.page-title {
-  font-weight: bold;
-}
-
-/* style the contact us h1. this helps put the section and article at the same height on the page */
-.contact_us {
-  margin-left: 70%;
-  font-weight: bold;
+#services p {
+  color: var(--theme-dark-blue);
+  font-size: 1.5rem;
 }
 
 /* text style on sidebar title, about page */
 .sidebar-title {
   font-weight: bold;
-}
-
-/* main content styling in about page */
-article#main-col { /* same id attachment rule: article#id */
-  float: left;
-  width: 65%;
 }
 
 footer {
@@ -637,9 +606,7 @@ div.railroad-body {
 @media screen and (min-width: 48em) {
   header #branding,
   #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col {
+  #newsletter form {
     float: none;
   }
 
@@ -656,15 +623,12 @@ div.railroad-body {
     height: 20rem;
   }
 
-  /* set width of sidebar to take up entire section on smaller screens */
-  aside#sidebar {
+  #sidebar {
     width: 100%;
-    /* custom top margin for smaller screens to separate a project from its description */
     margin-top: 0;
   }
 
-  /*  set width for services on smaller screens */
-  article#main-col {
+  #main-col {
     width: 100%;
   }
 
@@ -708,6 +672,16 @@ div.railroad-body {
 
   .newsletter_title {
     margin-bottom: 1rem;
+  }
+
+  .services-container {
+    width: 57.5rem;
+  }
+
+  .page-title,
+  .contact_us {
+    margin-left: 0;
+    text-align: center;
   }
 
   .subscribe_button {
@@ -757,12 +731,6 @@ div.railroad-body {
     font-size: 10px;
   }
 
-  .contact_us {
-    margin-left: 0; /* remove previously set left margin */
-    font-weight: bold;
-    text-align: center;
-  }
-
   /* set bottom div width on smaller screens */
   .bottom {
     background: #222;
@@ -793,7 +761,7 @@ div.railroad-body {
     left: 40%;
     transform: translate(-50%, -50%);
   }
-} /* ends 768px media query */
+}
 
 @media screen and (min-width: 64em) {
   .show-for-large {
@@ -886,5 +854,19 @@ div.railroad-body {
 
   .myImg:hover {
     border-radius: 0.4rem;
+  }
+
+  #main {
+    transform: translateY(10rem);
+  }
+
+  #main-col,
+  #sidebar {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  footer {
+    bottom: -14.7rem;
   }
 }
