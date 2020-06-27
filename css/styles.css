@@ -131,7 +131,8 @@ button:focus {
   max-width: 47rem;
   margin: 0 auto;
 }
-
+.nav-list a:active,
+.nav-list a:focus,
 .nav-list a:hover {
   color: var(--theme-orange);
   background-color: var(--c-white);
@@ -568,7 +569,7 @@ div.railroad-body {
 
 .img-container {
   width: 50%;
-  margin: 0 -1rem;
+  margin: 0 -0.1rem;
   display: inline-block;
 }
 
@@ -682,6 +683,10 @@ div.railroad-body {
     width: auto;
   }
 
+  .heading {
+    top: 3rem;
+  }
+
   .page_title {
     font-size: 3rem;
   }
@@ -699,6 +704,10 @@ div.railroad-body {
   .index-newsletter .row {
     display: flex;
     align-items: center;
+  }
+
+  .newsletter_title {
+    margin-bottom: 1rem;
   }
 
   .subscribe_button {
@@ -720,6 +729,10 @@ div.railroad-body {
 
   .images-row div:last-child .itemdesc {
     margin-bottom: 2rem;
+  }
+
+  .modal-dialog {
+    width: auto;
   }
 
   .myImg {
