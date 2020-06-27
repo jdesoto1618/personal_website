@@ -136,15 +136,14 @@ textarea {
 
 .nav-list {
   height: 0;
-  margin: 0 auto;
-  padding: 0;
+  margin: 4rem auto 0 auto;
+  padding: 0 0 0 0;
   list-style: none;
-  transition: height 0.45s linear;
-  transform: translateY(4rem);
+  transition: padding-bottom 0.3s linear;
 }
 
 .nav-list.open {
-  height: 20rem;
+  padding: 0 0 16rem 0;
 }
 
 .nav-list li {
@@ -618,10 +617,6 @@ div.railroad-body {
     max-width: 50%;
   }
 
-  .nav-list.open {
-    height: 20rem;
-  }
-
   #sidebar {
     width: 100%;
     margin-top: 0;
@@ -764,6 +759,11 @@ div.railroad-body {
     left: 40%;
     transform: translate(-50%, -50%);
   }
+
+  .footer-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+  }
 }
 
 @media screen and (min-width: 64em) {
@@ -795,16 +795,14 @@ div.railroad-body {
     position: absolute;
     top: 4rem;
     bottom: auto;
-    left: -1.5rem;
+    left: -33%;
     right: auto;
-    transform: translateX(-100%);
-    transition: transform 0.3s linear;
+    transition: left 0.3s linear;
     background: var(--theme-dark-blue);
   }
 
   .nav-list.open {
-    height: 100vh;
-    transform: translateX(0);
+    left: -1.5rem;
   }
 
   .nav-list li:first-child {
