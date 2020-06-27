@@ -27,7 +27,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--c-white);
   margin-top: 1rem;
 }
@@ -311,22 +311,15 @@ header a:hover {
   margin-bottom: 4rem;
 }
 
-/* set styles for projects_description div */
-.projects_description {
-  position: absolute;
-  width: 82%;
-}
-
-/* style projects decription top margin. This page's description is different than the other pages  */
-.projects_description h2 {
-  margin-top: 10px;
-}
-
 .index-newsletter {
   padding: 0 1.5rem;
   background-color: var(--theme-dark-blue);
   border-top: #e8491d 3px solid;
   border-bottom: #e8491d 3px solid;
+}
+
+.projects #newsletter {
+  border-top: none;
 }
 
 .index-newsletter .row {
@@ -878,6 +871,11 @@ div.railroad-body {
   #sidebar {
     max-width: 70%;
     margin: 0 auto;
+  }
+
+  .projects #newsletter {
+    position: relative;
+    top: 10rem;
   }
 
   footer {
