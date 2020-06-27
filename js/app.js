@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
     navList.classList.toggle('open');
   });
 
-  let yearText = document.querySelector('.current-year');
+  let yearText = document.querySelector('footer span');
   if(yearText) {
     yearText.innerHTML = new Date().getFullYear();
   }
