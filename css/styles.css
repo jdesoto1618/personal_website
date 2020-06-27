@@ -86,7 +86,8 @@ input, textarea {
   padding: 0 1rem;
   margin: 0 auto 1rem auto;
   font-size: 1.1rem;
-  transition: border 0.3s linear;
+  transition: border 0.3s linear, background-color 0.3s linear;
+  background-color: var(--c-white);
   color: var(--c-black);
 }
 
@@ -355,9 +356,8 @@ header a:hover {
   max-width: 80%;
 }
 
-/* input fields styling on services page */
 .side-name, .side-email, .side-message {
-  width: 92%;
+  width: 90%;
 }
 
 .contact-form-container {
@@ -605,8 +605,7 @@ div.railroad-body {
 
 @media screen and (min-width: 48em) {
   header #branding,
-  #newsletter h1,
-  #newsletter form {
+  #newsletter h1 {
     float: none;
   }
 
@@ -682,6 +681,10 @@ div.railroad-body {
   .contact_us {
     margin-left: 0;
     text-align: center;
+  }
+
+  .side-name, .side-email, .side-message {
+    width: 75%;
   }
 
   .subscribe_button {
@@ -820,14 +823,19 @@ div.railroad-body {
     margin-top: 10rem;
   }
 
-  .index-newsletter form {
+  form {
     position: relative;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: #9acefd;
   }
 
   .input-underline {
     opacity: 0;
     display: inline-block;
-    width: 70%;
+    width: 75%;
     height: 0.2rem;
     background-color: var(--theme-orange);
     position: absolute;
@@ -837,7 +845,7 @@ div.railroad-body {
     transition: opacity 0.3s linear;
   }
 
-  .hide-input-underline {
+  .show-input-underline {
     opacity: 1;
   }
 

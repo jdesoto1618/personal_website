@@ -20,16 +20,16 @@ document.addEventListener('DOMContentLoaded', function() {
   let yearText = document.querySelector('.current-year');
   yearText.innerHTML = new Date().getFullYear();
 
-  let inputUnderline = document.querySelector('.input-underline');
-  let emailInput = document.querySelector('.email-input');
-
-  emailInput.addEventListener('focusin', function(){
-    inputUnderline.classList.add('hide-input-underline');
-  });
-
-  emailInput.addEventListener('focusout', function(){
-    inputUnderline.classList.remove('hide-input-underline');
-  });
+  // let inputUnderline = document.querySelector('.input-underline');
+  // let emailInput = document.querySelector('.email-input');
+  //
+  // emailInput.addEventListener('focusin', function(){
+  //   inputUnderline.classList.add('show-input-underline');
+  // });
+  //
+  // emailInput.addEventListener('focusout', function(){
+  //   inputUnderline.classList.remove('show-input-underline');
+  // });
 
   if ($('body').hasClass('index')) {
     // multi-image modal
