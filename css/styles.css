@@ -278,7 +278,6 @@ header nav {
   margin: 2rem 0;
 }
 
-/* current page color, welcome span color */
 header .highlight {
   color: var(--theme-orange);
   font-weight: bold;
@@ -288,12 +287,6 @@ header .highlight {
 header a:hover {
   color: #ccc;
 }
-
-/* set colors for projects button states. commented this out until the dropdown menu is fixed, or functionality is moved to a different page */
-/*.open>.dropdown-toggle.btn-primary:hover,
-.open>.dropdown-toggle.btn-primary:focus {
-  background: #286090;
-}*/
 
 #body-content {
   background: url('../img/bg4.jpg') no-repeat;
@@ -318,8 +311,32 @@ header a:hover {
   border-bottom: #e8491d 3px solid;
 }
 
+.projects #main .container {
+  padding: 0;
+  position: relative;
+}
+
 .projects #newsletter {
   border-top: none;
+}
+
+.projects .container #sidebar {
+  width: 48%;
+  height: 30rem;
+  margin-left: auto;
+}
+
+.projects .container #sidebar .dark {
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.projects .container #sidebar .sidebar-title {
+  margin-top: 0;
 }
 
 .index-newsletter .row {
@@ -401,16 +418,15 @@ footer {
   background-color: var(--theme-orange);
 }
 
-/************************************************************
-**********              image slider               **********
-*************************************************************/
-
 #wrapper {
   position: absolute;
-  width: 51.94%;
-  min-height: 30.5vw;
+  width: 52%;
   overflow: hidden;
-  margin-top: 10px;
+  top: 0;
+  bottom: auto;
+  left: 0;
+  right: auto;
+  height: 100%;
 }
 
 .layer {
