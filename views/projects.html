@@ -44,23 +44,15 @@
       </div>
     </header>
 
-    <section id="newsletter" class="index-newsletter">
-      <div class="row">
-        <div class="small-12 medium-6 text-center">
-          <h2 class="newsletter_title">Subscribe to the Newsletter!</h2>
-        </div>
-        <div class="small-12 medium-6 text-center">
-          <form action="home.html" method="post">
-            <input type="email" placeholder="email@email.com" class="email-input" required>
-            <button type="submit" class="subscribe_button" name="button">Subscribe</button>
-          </form>
-        </div>
-      </div>
-    </section>
-
     <section id="main">
-      <div class="container">
-        <article id="main-col">
+      <div class="projects-container">
+        <article class="show-for-large">
+          <aside class="description slider-description">
+            <div class="dark">
+              <h3 class="sidebar-title">Image Slider</h3>
+              <p>The image slider works by separating the two images and their corresponding description text into top and bottom layers. When the mouse is moving over an image, it is slowly concealing one layer over another.</p>
+            </div>
+          </aside>
           <section id="wrapper" class="skewed">
             <!-- Top layer and image -->
             <div class="layer bottom">
@@ -68,10 +60,10 @@
                 <div class="railroad-body">
                   <h1>Railroad</h1>
                   <p class="img-text">While not as vital to passengers, rail transportation still moves millions of people per year and also transports significant amounts of cargo throughout the United States. </p>
-                </div> <!--ends content body-->
+                </div>
                 <img src="../img/rr.jpg" alt="Rail Bridge">
-              </div> <!--ends content wrap-->
-            </div> <!--ends layer bottom-->
+              </div>
+            </div>
 
             <!-- Bottom layer and image -->
             <div class="layer top">
@@ -79,7 +71,7 @@
                 <div class="coffee-body">
                   <h1>Coffee</h1>
                   <p class="img-text">An integral part of American's lives, this drink took hold when need for an alternative beverage arose during the Boston Tea Party.</p>
-                </div> <!--ends content body-->
+                </div>
                 <img src="../img/coffee.jpg" alt="Coffee Image">
               </div> <!--ends content wrap-->
             </div> <!--ends layer top-->
@@ -87,20 +79,10 @@
             <div class="handle"></div>
           </section> <!-- ends wrapper section -->
         </article> <!-- ends #main-col article -->
-
-        <!-- image slider section sidebar -->
-        <aside id="sidebar">
-          <div class="dark">
-            <h3 class="sidebar-title">Image Slider</h3>
-            <p>The image "slider" is written in JavaScript and CSS. It works by separating the two images and their corresponding description text into different layers, one on top and one on bottom. When the mouse is moving over an image, it is slowly concealing one layer over another, and back again when the mouse is moved in the opposite direction.</p>
-          </div>
-        </aside>
       </div>
-    </section> <!-- ends main section -->
+    </section>
 
-    <!-- note, project_separation commented out as of 6/9/2018, because different projects can be given their own static page via dropdown -->
-    <!-- <hr class="project_separation"> -->
-    <footer class="text-center">
+    <footer class="text-center projects-footer">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 footer-text">

@@ -311,6 +311,10 @@ header a:hover {
   border-bottom: #e8491d 3px solid;
 }
 
+.projects {
+  height: 100vh;
+}
+
 .projects #main .container {
   padding: 0;
   position: relative;
@@ -320,13 +324,7 @@ header a:hover {
   border-top: none;
 }
 
-.projects .container #sidebar {
-  width: 48%;
-  height: 30rem;
-  margin-left: auto;
-}
-
-.projects .container #sidebar .dark {
+.slider-description .dark {
   height: 100%;
   text-align: center;
   padding: 2rem;
@@ -335,7 +333,7 @@ header a:hover {
   justify-content: center;
 }
 
-.projects .container #sidebar .sidebar-title {
+.slider-description .sidebar-title {
   margin-top: 0;
 }
 
@@ -416,127 +414,6 @@ footer {
   padding: 1.75rem 0;
   color: #fff;
   background-color: var(--theme-orange);
-}
-
-#wrapper {
-  position: absolute;
-  width: 52%;
-  overflow: hidden;
-  top: 0;
-  bottom: auto;
-  left: 0;
-  right: auto;
-  height: 100%;
-}
-
-.layer {
-  position: absolute;
-  width: 100vw;
-  min-height: 55vw;
-  overflow: hidden;
-}
-
-.layer .content-wrap {
-  position: absolute;
-  width: 100vw;
-  min-height: 8vw;
-}
-
-/* set styles for coffee h1 */
-div.coffee-body {
-  width: 10%;
-  position: absolute;
-  top: 70%;
-  left: 3%;
-  text-align: center;
-}
-
-/* set styles for railroad h1 */
-div.railroad-body {
-  width: 10%;
-  top: 60%;
-  left: 37%;
-  position: absolute;
-  color: #fff;
-}
-
-/* set image size for each picture on image slider */
-.layer img {
-  position: absolute;
-  width: 18%;
-  top: 180%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-}
-
-/* set font size for coffee/railroads project h1 */
-.layer h1 {
-  font-size: 2em;
-}
-
-.bottom {
-  background: #222;
-  z-index: 1;
-}
-
-.bottom .content-body {
-  right: 5%;
-}
-
-.bottom h1 {
-  color: #fdab00;
-}
-
-.top {
-  background-color: #eee;
-  color: #222;
-  z-index: 2;
-  width: 50vw;
-}
-
-.top .content-body {
-  left: 5%;
-  color: #222;
-}
-
-.handle {
-  position: absolute;
-  height: 100%;
-  display: block;
-  background-color: #fdab00;
-  width: 5px; /* set width of image divider */
-  top: 0;
-  left: 49%; /* starting position of divider before mouseover */
-  z-index: 3; /* place on top of all elements */
-}
-
-.skewed .handle {
-  top: 11%; /* position of image divider */
-  transform: rotate(30deg) translateY(-50%);
-  height: 206%;
-  transform-origin: top;
-}
-
-.skewed .top {
-  transform: skew(-30deg);
-  margin-left: -1188px;
-  width: calc(25vw + 1000px);
-}
-
-.skewed .top .content-wrap {
-  transform: skew(30deg);
-  margin-left: 1000px;
-}
-
-/* on projects page, set custom image divider position for mobile so it lines up perfectly */
-.handle {
-  left: 51%;
-}
-
-/* on projects page, set the font size for image text on mobile */
-.img-text {
-  font-size: 80%;
-  margin: 0;
 }
 
 .itemdesc {
@@ -634,18 +511,8 @@ div.railroad-body {
     max-width: 50%;
   }
 
-  #sidebar {
-    width: 100%;
-    margin-top: 0;
-  }
-
   #main-col {
     width: 100%;
-  }
-
-  /* set custom width for smaller screens */
-  #wrapper {
-    width: 83.5%;
   }
 
   /* change the height property of this div so the box is the correct height */
@@ -728,53 +595,11 @@ div.railroad-body {
     max-width: 10rem;
   }
 
-  /* custom width for railroad-body div on smaller screens. this is to encapsulate its text */
-  div.railroad-body {
-    width: 30%;
-    left: 50%;
-    /* used this to "reset" the top position */
-    top: auto;
-  }
-
-  /* custom width for coffee-body div on smaller screens. this is to encapsulate its text */
-  div.coffee-body {
-    width: 23%;
-    top: auto;
-  }
-
-  p.img-text {
-    font-size: 10px;
-  }
-
   /* set bottom div width on smaller screens */
   .bottom {
     background: #222;
     z-index: 1;
     width: 100%;
-  }
-
-  /* set size of h1 in railroad/coffee project */
-  .layer h1 {
-    font-size: 1.25em;
-  }
-
-  /* adjust starting position of yellow handle on smaller screens */
-  .handle {
-    left: 53%;
-  }
-
-  .skewed .top {
-    transform: skew(-30deg);
-    margin-left: -1065px;
-    width: calc(44vw + 1000px); /* set initial width of the top layer */
-  }
-
-  /* set image size for each picture on image slider */
-  .layer img {
-    position: absolute;
-    width: 15%;
-    left: 40%;
-    transform: translate(-50%, -50%);
   }
 
   .footer-text {
@@ -785,7 +610,7 @@ div.railroad-body {
 
 @media screen and (min-width: 64em) {
   .show-for-large {
-    display: inline-block;
+    display: block;
   }
 
   .hide-for-large {
@@ -847,23 +672,6 @@ div.railroad-body {
     background-color: #9acefd;
   }
 
-  .input-underline {
-    opacity: 0;
-    display: inline-block;
-    width: 75%;
-    height: 0.2rem;
-    background-color: var(--theme-orange);
-    position: absolute;
-    left: 50%;
-    top: 2.75rem;
-    transform: translateX(-50%);
-    transition: opacity 0.3s linear;
-  }
-
-  .show-input-underline {
-    opacity: 1;
-  }
-
   .img-container {
     transition: all 0.3s linear;
   }
@@ -889,12 +697,137 @@ div.railroad-body {
     margin: 0 auto;
   }
 
+  .projects-container {
+    position: relative;
+  }
+
   .projects #newsletter {
     position: relative;
     top: 10rem;
   }
 
+  .skewed {
+    /* position: absolute; */
+    width: 100%;
+    overflow: hidden;
+    /* top: 0;
+    bottom: auto;
+    left: 0;
+    right: auto; */
+    height: 100%;
+  }
+
+  .layer .content-wrap {
+    position: absolute;
+    width: 100vw;
+    min-height: 8vw;
+  }
+
+  .coffee-body,
+  .railroad-body {
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    bottom: auto;
+  }
+
+  .coffee-body {
+    left: 16rem;
+    right: auto;
+  }
+
+  .coffee-body * {
+    color: var(--c-black);
+  }
+
+  .railroad-body {
+    right: 1rem;
+    left: auto;
+    color: #fff;
+  }
+
+  .layer img {
+    position: absolute;
+    width: 20%;
+    top: auto;
+    bottom: -16.5rem;
+    left: 40.35%;
+    right: auto;
+  }
+
+  .top img {
+    left: 52.5%;
+  }
+
+  .bottom {
+    background: #222;
+    z-index: 1;
+  }
+
+  .bottom .content-body {
+    right: 5%;
+  }
+
+  .bottom h1 {
+    color: #fdab00;
+  }
+
+  .top .content-body {
+    left: 5%;
+    color: #222;
+  }
+
+  .handle {
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #fdab00;
+    width: 5px; /* set width of image divider */
+    top: 0;
+    left: 49%; /* starting position of divider before mouseover */
+    z-index: 3; /* place on top of all elements */
+  }
+
+  .skewed .handle {
+    top: 11rem;
+    bottom: auto;
+    left: 51%;
+    right: auto;
+    transform: rotate(30deg);
+    height: 262%;
+  }
+
+  .skewed .top {
+    transform: skew(-30deg);
+    width: 67%;
+    left: -19rem;
+    right: auto;
+    background-color: #eee;
+    color: #222;
+    z-index: 2;
+  }
+
+  .skewed .top .content-wrap {
+    transform: skew(30deg);
+  }
+
+  .img-text {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+
+  .layer {
+    position: absolute;
+    width: 100%;
+    min-height: 30rem;
+    overflow: hidden;
+  }
+
   footer {
     bottom: -14.7rem;
+  }
+
+  .projects-footer {
+    bottom: 0;
   }
 }
