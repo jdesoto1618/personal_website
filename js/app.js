@@ -1,44 +1,46 @@
 document.addEventListener('DOMContentLoaded', function() {
   function getContainers() {
-    let menuContainer = document.querySelector('.menu-container');
-    let navList = document.querySelector('.list-inline');
-    return [menuContainer, navList];
+    const menuContainer = document.querySelector('.menu-container');
+    const navList = document.querySelector('.nav-list');
+    const imgContainer = document.querySelectorAll('.img-container');
+    const modalContainer = document.querySelector('.modal-content');
+    return [menuContainer, navList, imgContainer, modalContainer];
   }
 
   let menuContainer = getContainers()[0];
   let navList = getContainers()[1];
+  let imgContainer = getContainers()[2];
+  let modalContainer = getContainers()[3];
+  const bodyTag = document.querySelector('body');
 
   menuContainer.addEventListener('click', function(){
-    menuContainer.classList.toggle('change');
+    menuContainer.classList.toggle('update-menu-bars');
     navList.classList.toggle('open');
   });
 
-  if ($('body').hasClass('index')) {
-    // multi-image modal
-    $(document).ready(function () {
-      $('#myModal').on('show.bs.modal', function (e) {
-        var image = $(e.relatedTarget).attr('src');
-        $('.showimage').attr('src', image);
-      });
-    });
+  let yearText = document.querySelector('footer span');
+  if(yearText) {
+    yearText.innerHTML = new Date().getFullYear();
+  }
 
-  } else if ($('body').hasClass('projects')) {
-    // image slider code
-    let wrapper = document.getElementById('wrapper');
+  if (bodyTag.classList.contains('home')) {
+    $('#myModal').on('show.bs.modal', function (e) {
+      var image = $(e.relatedTarget).attr('src');
+      $('.showimage').attr('src', image);
+    });
+  } else if (bodyTag.classList.contains('projects')) {
+    let wrapper = document.querySelector('#wrapper');
     let topLayer = wrapper.querySelector('.top');
     let handle = wrapper.querySelector('.handle');
     let skew = 0;
-    let delta = 0;
 
-    if(wrapper.className.indexOf('skewed') != -1) {
-      skew = 1000;
+    if(wrapper.classList.contains('skewed')) {
+      skew = 192.5;
     }
 
     wrapper.addEventListener('mousemove', function (e) {
-      delta = (e.clientX - window.innerWidth / 2) * 0.5;
-      handle.style.left = e.clientX + delta + 'px';
-      topLayer.style.width = e.clientX + skew + delta + 'px';
-      // end image slider code
-    }); //end wrapper function
-  } // end else if
+      handle.style.left = e.clientX + 'px';
+      topLayer.style.width = e.clientX + skew + 'px';
+    });
+  }
 });

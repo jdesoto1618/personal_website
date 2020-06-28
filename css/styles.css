@@ -1,135 +1,285 @@
-/************************************************************
-**********              global styles              **********
-*************************************************************/
-
-/* set the box sizing for the entire document to border-box */
-html, body {
-  box-sizing: border-box;
+:root {
+  --theme-orange: #e8491d;
+  --theme-dark-blue: #35424a;
+  --c-white: #fff;
+  --c-black: #000;
 }
 
-/* this allows individual modifications to be made to the border box property. modifications made to an element are then inherited */
+html, body {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-/* body styling */
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
+h1 {
+  font-size: 3rem;
+  color: var(--c-white);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--c-white);
+  margin-top: 1rem;
+}
+
+h5 {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.3rem;
+  color: var(--c-white);
+}
+
+a, button {
+  letter-spacing: 0.5px;
+}
+
+.btn,
+button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  display: inline-block;
+  width: 30rem;
+  height: 3.3rem;
   padding: 0;
-  margin: 0;
-  background-color: #f4f4f4;
+  border-radius: 0.4rem;
+  border: 0.1rem solid transparent;
+  outline: none;
+  transition: all 0.3s linear;
+  background-color: var(--theme-orange);
+  color: var(--c-white);
 }
 
-/* container divs */
+.btn:hover,
+button:hover {
+  background-color: var(--c-white);
+  color: var(--theme-orange);
+  border: 0.1rem solid var(--theme-orange);
+}
+
+.btn:focus,
+button:focus {
+  outline: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+input, textarea {
+  width: 30rem;
+  height: 3.3rem;
+  border-radius: 0.4rem;
+  border: 0.2rem solid transparent;
+  padding: 0 1rem;
+  margin: 0 auto 1rem auto;
+  font-size: 1.1rem;
+  transition: border 0.3s linear, background-color 0.3s linear;
+  background-color: var(--c-white);
+  color: var(--c-black);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+textarea {
+  padding: 0.75rem 1rem;
+  height: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.small-12 {
+  width: 100%;
+  padding: 0;
+}
+
+.show-for-large {
+  display: none;
+}
+
 .container {
-  width: 90%; /* set width of this container */
-  margin: auto; /* use margin auto for percentage width. this centers the elements */
-  overflow: hidden; /* hide the hanburger menu items */
+  padding: 0 3rem;
+  overflow: hidden;
 }
 
-/* global dark background. put this class anywhere a dark background is needed. Also changes text color to white */
+.dark-blue {
+  background-color: var(--theme-dark-blue);
+}
+
 .dark {
   padding: 5px 20px 20px 20px;
-  background-color: #35424a;
+  background-color: var(--theme-dark-blue);
   color: #fff;
   height: 65.5vh;
 }
 
+.navbar-container {
+  padding: 0;
+}
+
+.nav-list {
+  height: 0;
+  margin: 4rem auto 0 auto;
+  padding: 0 0 0 0;
+  list-style: none;
+  transition: padding-bottom 0.3s linear;
+}
+
+.nav-list.open {
+  padding: 0 0 16rem 0;
+}
+
+.nav-list li {
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.nav-list a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  border: 0.1rem solid transparent;
+  background-color: #5d676e;
+  transition: all 0.3s linear;
+  max-width: 47rem;
+  margin: 0 auto;
+  padding: 0.5rem 0;
+}
+.nav-list a:active,
+.nav-list a:focus,
+.nav-list a:hover {
+  color: var(--theme-orange);
+  background-color: var(--c-white);
+  border: 0.1rem solid var(--theme-orange);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 0.5rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  top: -2rem;
+  left: -0.5rem;
+}
+
+.menu-container:hover {
+  cursor: pointer;
+}
+
+.menu-container::before,
+.menu-container::after {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: all 0.3s linear;
+  bottom: auto;
+}
+
+.menu-container::before {
+  top: 1rem;
+}
+
+.menu-container::after {
+  top: 2.4rem;
+}
+
+.update-menu-bars::before {
+  transform: rotate(-45deg);
+  top: 1.75rem;
+}
+
+.update-menu-bars::after {
+  transform: rotate(45deg);
+  top: 1.75rem;
+}
+
+.menu-bar {
+  display: inline-block;
+  position: absolute;
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #fff;
+  top: 1.7rem;
+  opacity: 1;
+  transition: opacity 0.3s linear;
+}
+
+.update-menu-bars .menu-bar {
+  opacity: 0;
+}
+
 /* set styles for hr's */
 .project_separation {
-  border: 2px solid #e8491d;
+  border: 2px solid var(--theme-orange);
   position: absolute;
   width: 81.7%;
   top: 108.25%;
   left: 11.1%;
 }
 
-/* images section */
 #boxes {
-  margin-top: 20px;
+  margin-top: 2rem;
 }
 
-/************************************************************
-**********             menu bars                   **********
-*************************************************************/
-
-/* Rotate top bar */
-.change .b1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
-    transform: rotate(-45deg) translate(-5px, 6px) ;
-}
-
-/* Fade out the second bar */
-.change .b2 {
-    opacity: 0;
-}
-
-/* Rotate bottom bar */
-.change .b3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
-    transform: rotate(45deg) translate(-7px, -8px) ;
-}
-
-/************************************************************
-**********             header styling              **********
-*************************************************************/
-
-/* header */
 header {
-  background-color: #35424a;
+  background-color: var(--theme-dark-blue);
   color: #fff;
-  padding-top: 20px;
-  min-height: 85px;
-  border-bottom: #e8491d 3px solid;
+  padding-top: 1.5rem;
+  min-height: 10rem;
+  border-bottom: #e8491d 0.3rem solid;
+  position: relative;
 }
 
-/* header links */
-a.btn-primary.btn-block {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none; /*removes underline on links */
-  text-transform: uppercase;
-  font-size: 16px;
-  background-color: #35424a;
-  border: none;
-}
-
-/* align page title with menu options */
-.col-xs-6.heading {
-  padding-top: 3px;
-}
-
-/* style ul's */
-ul {
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-/* remove list item button padding in header */
-.list-inline>li {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-/* set margin of welcome message h1 */
-header #branding h1 {
-  margin: 0;
-}
-
-/* move menu to the right */
 header nav {
-  float: right;
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
-/* current page color, welcome span color */
+.heading {
+  position: absolute;
+  top: 3.5rem;
+  bottom: auto;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: 75%;
+}
+
+.page_title {
+  margin: 0;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  text-transform: capitalize;
+}
+
+.about-title {
+  margin: 2rem 0;
+}
+
 header .highlight {
-  color: #e8491d;
+  color: var(--theme-orange);
   font-weight: bold;
 }
 
@@ -138,369 +288,231 @@ header a:hover {
   color: #ccc;
 }
 
-/* remove padding for header items */
-div.col-xs-6 {
-  padding: 0;
-}
-
-/* set colors for projects button states. commented this out until the dropdown menu is fixed, or functionality is moved to a different page */
-/*.open>.dropdown-toggle.btn-primary:hover,
-.open>.dropdown-toggle.btn-primary:focus {
-  background: #286090;
-}*/
-
-
-/* main body content styling */
 #body-content {
-  min-height: 400px;
-  background: url('../img/bg4.jpg') no-repeat 0 -500px;
-  -webkit-filter:grayscale(100%); /* gray out picture to make text more visible */
-  color: #fff;
+  background: url('../img/bg4.jpg') no-repeat;
+  -webkit-filter: grayscale(100%);
+  background-size: cover;
 }
 
-/* main body h1 styling */
-#body-content h1 {
-  margin-top: 100px;
-  font-size: 55px;
-  margin-bottom: 10px;
-  font-weight: bold;
+.body-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin: 4rem 0;
 }
 
-/* showcase paragraph styling */
-#body-content p {
-  font-size: 20px;
+.body-copy {
+  margin-bottom: 4rem;
 }
 
-/************************************************************
-**********         newsletter styling              **********
-*************************************************************/
-
-/* newsletter section styling */
-#newsletter {
-  padding: 15px;
-  background-color: #35424a;
-  border-bottom: #e8491d 3px solid;
-}
-
-/* newsletter h2 color */
-#newsletter h2 {
-  color: #fff;
-  margin-top: 10px;
-}
-
-/* newsletter subscribe form margin */
-#newsletter form {
-  margin-top: 10px;
-}
-
-/* set styles for projects_description div */
-.projects_description {
-  position: absolute;
-  width: 82%;
-}
-
-/* style projects decription top margin. This page's description is different than the other pages  */
-.projects_description h2 {
-  margin-top: 10px;
-}
-
-/* add top border for index page newsletter section */
 .index-newsletter {
+  padding: 0 1.5rem;
+  background-color: var(--theme-dark-blue);
   border-top: #e8491d 3px solid;
   border-bottom: #e8491d 3px solid;
 }
 
-/* style email input box */
-#newsletter input[type="email"] {
-  padding: 16px 15px 16px 2px; /* put placeholder in correct position due to padding */
-  height: 33px;
-  width: 250px;
-  border-radius: 2px;
-  border: none;
+.projects {
+  height: 100vh;
 }
 
-/* subscribe button styling */
+.projects #main .container {
+  padding: 0;
+  position: relative;
+}
+
+.projects #newsletter {
+  border-top: none;
+}
+
+.slider-description .dark {
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slider-description .sidebar-title {
+  margin-top: 0;
+}
+
+.index-newsletter .row {
+  padding: 1rem;
+}
+
+.index-newsletter form {
+  margin-top: 1rem;
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+
+.newsletter_title {
+  margin-bottom: 2rem;
+}
+
 .subscribe_button {
-  height: 34px;
-  width: 110px;
-  background-color: #e8491d;
-  border: none;
-  color: #fff;
-  border-radius: 2px;
-  font-weight: bold;
+  margin-bottom: 1.5rem;
 }
 
-/* quote button styling, services page */
+.quote div {
+  padding-bottom: 0.5rem;
+}
+
+.quote div:last-child {
+  padding-bottom: 0;
+}
+
 .quote_button {
-  height: 34px;
-  width: 89%;
-  background-color: #e8491d;
-  border: none;
-  color: #fff;
-  border-radius: 2px;
-  margin-left: 3px;
+  display: inline-block;
+  max-width: 80%;
 }
 
-/* set color for form input fields */
-.quote {
-  color: black;
-}
-
-/* sidebar quote button div styling, services page */
-.sidebar-quote-button {
-  text-align: center;
-}
-
-/* text style on sidebar title, services page */
-.sidebar-quote-title {
-  font-weight: bold;
-  text-align: center;
-}
-
-/* sidebar message div styling */
-.sidebar-message {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* style input field divs on services page */
-.sidebar-name-field, .sidebar-email-field, .sidebar-message, .quote_button {
-  text-align: center;
-  padding: 5px;
-}
-
-/* input fields styling on services page */
 .side-name, .side-email, .side-message {
-  width: 92%;
-  margin-left: 3px;
+  width: 90%;
 }
 
-/* sidebar styling in services page */
-.services-dark { /* if attaching the id, place it as one word: aside#id */
-  padding: 5px 20px 35px 20px;
-  background-color: #35424a;
-  color: #fff;
+.contact-form-container {
+  padding: 1.5rem 0 2.5rem 0;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
-/* styling the list of services, on services page */
-ul#services li {
-  padding: 20px;
-  border: #ccc solid 1px;
-  margin-bottom: 5px;
+#main-col .page-title {
+  margin-bottom: 2rem;
+}
+
+#services {
+  max-width: 85%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#services li {
+  padding: 2rem;
+  margin-bottom: 0.5rem;
   background-color: #e6e6e6;
 }
 
-/* styling for the images on the index page */
-#boxes .box img {
-  width: 90px;
+#services h3 {
+  margin: 1rem 0;
 }
 
-/* sidebar styling in about page */
-aside#sidebar { /* if attaching the id, place it as one word: aside#id */
-  width: 30%;
-  float: right;
-  text-align: center;
-  /* margin-top: 10px; */
+#services p {
+  color: var(--theme-dark-blue);
+  font-size: 1.5rem;
 }
 
-/* text styling on about me section, about page */
-.page-title {
-  font-weight: bold;
+.about #main-col p:last-child {
+  margin-bottom: 3rem;
 }
 
-/* style the contact us h1. this helps put the section and article at the same height on the page */
-.contact_us {
-  margin-left: 70%;
-  font-weight: bold;
-}
-
-/* text style on sidebar title, about page */
-.sidebar-title {
-  font-weight: bold;
-}
-
-/* main content styling in about page */
-article#main-col { /* same id attachment rule: article#id */
-  float: left;
-  width: 65%;
-}
-
-/* footer styling */
 footer {
   width: 100%;
-  top: 111.5%;
-  padding: 15px 10px 10px 10px;
-  margin-top: 20px;
+  position: absolute;
+  bottom: -4.7rem;
+  padding: 1.75rem 0;
   color: #fff;
-  background-color: #e8491d;
-  text-align:center;
+  background-color: var(--theme-orange);
 }
 
-/* adjust image image size in footer */
-.footer_img {
-  width: 100px;
-  height: 28.21px;
-  padding: 0px;
-  margin: 0px;
-}
-/* end footer styling */
-
-/************************************************************
-**********              image slider               **********
-*************************************************************/
-
-#wrapper {
-  position: absolute;
-  width: 51.94%;
-  min-height: 30.5vw;
-  overflow: hidden;
-  margin-top: 10px;
+.itemdesc {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
 }
 
-.layer {
-  position: absolute;
-  width: 100vw;
-  min-height: 55vw;
-  overflow: hidden;
+.images-row div:last-child .itemdesc {
+  margin-bottom: 0;
 }
 
-.layer .content-wrap {
-  position: absolute;
-  width: 100vw;
-  min-height: 8vw;
+.img-container {
+  width: 50%;
+  margin: 0 -0.1rem;
+  display: inline-block;
 }
 
-/* set styles for coffee h1 */
-div.coffee-body {
-  width: 10%;
-  position: absolute;
-  top: 70%;
-  left: 3%;
-  text-align: center;
+.img-container:hover {
+  cursor: pointer;
 }
 
-/* set styles for railroad h1 */
-div.railroad-body {
-  width: 10%;
-  top: 60%;
-  left: 37%;
-  position: absolute;
-  color: #fff;
+.myImg {
+  max-width: 50%;
 }
 
-/* set image size for each picture on image slider */
-.layer img {
-  position: absolute;
-  width: 18%;
-  top: 180%;
-  left: 25%;
+.modal {
+  top: 50%;
+  bottom: auto;
+  left: 50%;
+  right: auto;
   transform: translate(-50%, -50%);
 }
 
-/* set font size for coffee/railroads project h1 */
-.layer h1 {
-  font-size: 2em;
+.modal img {
+  border-radius: 0.4rem;
 }
 
-.bottom {
-  background: #222;
-  z-index: 1;
-}
-
-.bottom .content-body {
-  right: 5%;
-}
-
-.bottom h1 {
-  color: #fdab00;
-}
-
-.top {
-  background-color: #eee;
-  color: #222;
-  z-index: 2;
-  width: 50vw;
-}
-
-.top .content-body {
-  left: 5%;
-  color: #222;
-}
-
-.handle {
-  position: absolute;
-  height: 100%;
+/* Modal Content (Image) */
+.modal-content {
+  background-color: #fff;
+  margin: auto;
   display: block;
-  background-color: #fdab00;
-  width: 5px; /* set width of image divider */
-  top: 0;
-  left: 49%; /* starting position of divider before mouseover */
-  z-index: 3; /* place on top of all elements */
+  max-width: 70rem;
+  opacity: 1;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.5s;
+  animation-name: zoom;
+  animation-duration: 0.5s;
+  transition: opacity 0.5s linear;
 }
 
-.skewed .handle {
-  top: 11%; /* position of image divider */
-  transform: rotate(30deg) translateY(-50%);
-  height: 206%;
-  transform-origin: top;
+.modal-footer {
+  border: none;
 }
 
-.skewed .top {
-  transform: skew(-30deg);
-  margin-left: -1188px;
-  width: calc(25vw + 1000px);
+.close_button {
+  width: 50%;
+  margin: 0 auto;
 }
 
-.skewed .top .content-wrap {
-  transform: skew(30deg);
-  margin-left: 1000px;
-}
-
-/************************************************************
-**********             media queries               **********
-*************************************************************/
-
-/* media query to handle newsletter form issue starting at 969 px */
-@media(max-width: 969px) {
-  /* margin adjustments for email field at this screen size */
-  #newsletter form input[type="email"] {
-    margin-bottom: 5px;
+@-webkit-keyframes zoom {
+  from {
+    -webkit-opacity: 0;
   }
-
-  /* adjust width to match email field width */
-  #newsletter button {
-    width: 251px;
+  to {
+    -webkit-opacity: 1;
   }
-} /* ends 969px media query */
+}
 
-/* run on screens up to 768px */
-@media(max-width: 768px) {
+@keyframes zoom {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 48em) {
   header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col {
+  #newsletter h1 {
     float: none;
-    text-align: center;
   }
 
-  /* set width of sidebar to take up entire section on smaller screens */
-  aside#sidebar {
+  p {
+    font-size: 1.6rem;
+  }
+
+  .medium-6 {
+    width: 50%;
+    padding: 0;
+  }
+
+  .nav-list a {
+    max-width: 50%;
+  }
+
+  #main-col {
     width: 100%;
-    /* custom top margin for smaller screens to separate a project from its description */
-    margin-top: 0;
-  }
-
-  /*  set width for services on smaller screens */
-  article#main-col {
-    width: 100%;
-  }
-
-  /* set custom width for smaller screens */
-  #wrapper {
-    width: 83.5%;
   }
 
   /* change the height property of this div so the box is the correct height */
@@ -509,28 +521,78 @@ div.railroad-body {
     font-size: 13px;
   }
 
-  /* custom width for railroad-body div on smaller screens. this is to encapsulate its text */
-  div.railroad-body {
-    width: 30%;
-    left: 50%;
-    /* used this to "reset" the top position */
-    top: auto;
+  .container {
+    width: auto;
   }
 
-  /* custom width for coffee-body div on smaller screens. this is to encapsulate its text */
-  div.coffee-body {
-    width: 23%;
-    top: auto;
+  .heading {
+    top: 3rem;
   }
 
-  p.img-text {
-    font-size: 10px;
+  .page_title {
+    font-size: 3rem;
   }
 
+  #body-content {
+    min-height: 35rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .index-newsletter {
+    padding: 1.5rem;
+  }
+
+  .index-newsletter .row {
+    display: flex;
+    align-items: center;
+  }
+
+  .newsletter_title {
+    margin-bottom: 1rem;
+  }
+
+  .services-container {
+    width: 57.5rem;
+  }
+
+  .page-title,
   .contact_us {
-    margin-left: 0; /* remove previously set left margin */
-    font-weight: bold;
+    margin-left: 0;
     text-align: center;
+  }
+
+  .side-name, .side-email, .side-message {
+    width: 75%;
+  }
+
+  .subscribe_button {
+    margin-bottom: 0;
+  }
+
+  .images-row {
+    display: flex;
+  }
+
+  .img-container {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .itemdesc {
+    margin-bottom: 2rem;
+  }
+
+  .images-row div:last-child .itemdesc {
+    margin-bottom: 2rem;
+  }
+
+  .modal-dialog {
+    width: auto;
+  }
+
+  .myImg {
+    max-width: 10rem;
   }
 
   /* set bottom div width on smaller screens */
@@ -540,231 +602,232 @@ div.railroad-body {
     width: 100%;
   }
 
-  /* set size of h1 in railroad/coffee project */
-  .layer h1 {
-    font-size: 1.25em;
+  .footer-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  .show-for-large {
+    display: block;
   }
 
-  /* adjust starting position of yellow handle on smaller screens */
+  .hide-for-large {
+    display: none;
+  }
+
+  header {
+    min-height: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  header .container {
+    overflow: visible;
+  }
+
+  .nav-list {
+    width: 25%;
+    height: 100vh;
+    margin: unset;
+    position: absolute;
+    top: 4rem;
+    bottom: auto;
+    left: -33%;
+    right: auto;
+    transition: left 0.3s linear;
+    background: var(--theme-dark-blue);
+  }
+
+  .nav-list.open {
+    left: -1.5rem;
+  }
+
+  .nav-list li:first-child {
+    margin-top: 2rem;
+  }
+
+  .nav-list li {
+    margin: 1rem 0;
+  }
+
+  .nav-list a {
+    max-width: 60%;
+  }
+
+  #body-content .container {
+    margin-top: 10rem;
+  }
+
+  form {
+    position: relative;
+  }
+
+  input:focus,
+  textarea:focus {
+    background-color: #9acefd;
+  }
+
+  .img-container {
+    transition: all 0.3s linear;
+  }
+
+  .img-container:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    border-radius: 0.4rem;
+    transform: scale(0.9);
+  }
+
+  .myImg:hover {
+    border-radius: 0.4rem;
+  }
+
+  #main {
+    transform: translateY(10rem);
+  }
+
+  #main-col,
+  #sidebar {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .projects-container {
+    position: relative;
+  }
+
+  .projects #newsletter {
+    position: relative;
+    top: 10rem;
+  }
+
+  .skewed {
+    /* position: absolute; */
+    width: 100%;
+    overflow: hidden;
+    /* top: 0;
+    bottom: auto;
+    left: 0;
+    right: auto; */
+    height: 100%;
+  }
+
+  .layer .content-wrap {
+    position: absolute;
+    width: 100vw;
+    min-height: 8vw;
+  }
+
+  .coffee-body,
+  .railroad-body {
+    position: absolute;
+    width: 30%;
+    top: 50%;
+    bottom: auto;
+  }
+
+  .coffee-body {
+    left: 16rem;
+    right: auto;
+  }
+
+  .coffee-body * {
+    color: var(--c-black);
+  }
+
+  .railroad-body {
+    right: 1rem;
+    left: auto;
+    color: #fff;
+  }
+
+  .layer img {
+    position: absolute;
+    width: 20%;
+    top: auto;
+    bottom: -16.5rem;
+    left: 40.35%;
+    right: auto;
+  }
+
+  .top img {
+    left: 52.5%;
+  }
+
+  .bottom {
+    background: #222;
+    z-index: 1;
+  }
+
+  .bottom .content-body {
+    right: 5%;
+  }
+
+  .bottom h1 {
+    color: #fdab00;
+  }
+
+  .top .content-body {
+    left: 5%;
+    color: #222;
+  }
+
   .handle {
-    left: 53%;
+    position: absolute;
+    height: 100%;
+    display: block;
+    background-color: #fdab00;
+    width: 5px; /* set width of image divider */
+    top: 0;
+    left: 49%; /* starting position of divider before mouseover */
+    z-index: 3; /* place on top of all elements */
+  }
+
+  .skewed .handle {
+    top: 11rem;
+    bottom: auto;
+    left: 51%;
+    right: auto;
+    transform: rotate(30deg);
+    height: 262%;
   }
 
   .skewed .top {
     transform: skew(-30deg);
-    margin-left: -1065px;
-    width: calc(44vw + 1000px); /* set initial width of the top layer */
+    width: 67%;
+    left: -19rem;
+    right: auto;
+    background-color: #eee;
+    color: #222;
+    z-index: 2;
   }
 
-  header {
-    padding-bottom: 20px;
+  .skewed .top .content-wrap {
+    transform: skew(30deg);
   }
 
-  #body-content h1 {
-    margin-top: 40px;
-  }
-
-  #newsletter button {
-    display: block;
-    width: 200px;
-  }
-
-  #newsletter form input[type="email"] {
-    display: block;
-    width: 200px;
-    /* margin-left: 4px; */
-    margin-bottom: 5px;
-  }
-
-  /* set image size for each picture on image slider */
-  .layer img {
-    position: absolute;
-    width: 15%;
-    left: 40%;
-    transform: translate(-50%, -50%);
-  }
-} /* ends 768px media query */
-
-/* run on screens up to 480px */
-@media only screen and (max-width: 480px) {
-  /* set font size of page title for mobile */
-  .page_title {
-    font-size: 30px;
-  }
-
-  /* set styles for h2 title on mobile */
-  .newsletter_title {
-    font-size: 26px;
-    margin-top: 0;
-  }
-
-  /* set menu bar div styles */
-  .menu-container {
-    display: block;
-    cursor: pointer;
-    padding: 5px;
-    width: 35px; /* set div width to be the similar to the menu bars width */
-    margin-bottom: 10px;
-  }
-
-  /* set up menu bar styles */
-  .b1, .b2, .b3 {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px 0;
-    transition: 0.3s;
-  }
-
-  /* move menu bars to the left on mobile */
-  div.col-xs-6 {
-    width: 100%; /* set buttons to take up their own row */
-  }
-
-  /* change initial height of the ul until hamburger is clicked */
-  .list-inline {
-    height: 0;
-    transition: height 0.6s;
-  }
-
-  /* space between buttons in header on mobile */
-  .list-inline>li {
-    margin-bottom: 5px;
-    width: 100%;
-  }
-
-  /* set the height when the menu is clicked */
-  .open {
-    height: 152px;
-  }
-
-  /* change header li padding on mobile */
-  header li {
-    /* padding: 0 53px 0 1px; */
-  }
-
-  /*  change color for buttons on mobile */
-  a.btn.btn-primary.btn-block {
-    background-color: #4a4735;
-    font-weight: bold;
-  }
-
-  /* on projects page, set custom image divider position for mobile so it lines up perfectly */
-  .handle {
-    left: 51%;
-  }
-
-  /* on projects page, set the font size for image text on mobile */
   .img-text {
-    font-size: 80%;
+    font-size: 1.3rem;
     margin: 0;
   }
 
-  /* reduce font size on mobile for all pages */
-  #body-content h1 {
-    font-size: 40px;
-  }
-
-  /* center newsletter input and submit button fields */
-  #newsletter form input[type="email"],
-  #newsletter button {
-    margin: 2% auto;
-  }
-
-  /* set width for email field on mobile */
-  #newsletter form input[type="email"] {
-    width: 75%;
-    padding: 0 5px;
-  }
-
-  /* adjust width to match email field on mobile */
-  #newsletter button {
-    width: 75%;
-    padding: 0;
-  }
-
-  /* set styles for close button on modal */
-  .close_button {
-    width: 40%;
-    margin: auto;
-  }
-
-  img.myImg {
+  .layer {
+    position: absolute;
     width: 100%;
+    min-height: 30rem;
+    overflow: hidden;
   }
 
-  .itemdesc {
-    font-size: 0.8em;
-    font-weight: bold;
+  footer {
+    bottom: -14.7rem;
   }
 
-  button.close_button {
-    width: 67%;
+  .projects-footer {
+    bottom: 0;
   }
-
-  img.footer_img {
-    margin-top: 15px;
-  }
-} /* ends 480px media query
-
-
-/************************************************************
-**********              modal styling              **********
-*************************************************************/
-
-/* style the image used to trigger the modal */
-.myImg {
-    cursor: pointer;
-    transition: 0.3s;
-    width: 90px;
-}
-
-/* set styling for images on hover */
-.myImg:hover {
-  opacity: 0.7;
-  border-radius: 5px;
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  background-color: #fff;
-  margin: auto;
-  display: block;
-  max-width: 700px;
-}
-
-/* set styles on images that appear in the modal */
-.showimage {
-  display: block;
-  margin: auto;
-  border-radius: 5px;
-}
-
-/* set styles for modal footer */
-.modal-footer {
-  border: none;
-}
-
-/* set styles for close button on modal */
-.close_button {
-  width: 40%;
-  margin: auto;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-  from {-webkit-transform:scale(0)}
-  to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
 }
